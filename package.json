@@ -1,0 +1,38 @@
+{
+  "name": "floatl",
+  "version": "0.0.0",
+  "description": "A library agnostic, pragmatic implementation of the Float Label Pattern",
+  "main": [
+    "dist/js/floatl.js",
+    "dist/css/floatl.css"
+  ],
+  "dependencies": {
+    "gulp": "^3.9.0"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "gulp": "^3.9.0",
+    "gulp-util": "^3.0.6",
+    "gulp-mocha": "^2.1.3",
+    "gulp-sass": "^2.0.4",
+    "node-bourbon": "^4.2.3"
+  },
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/richardvenneman/floatl"
+  },
+  "keywords": [
+    "floatlabelpattern",
+    "float",
+    "label"
+  ],
+  "author": "Richard Venneman (richardvenneman@me.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/richardvenneman/floatl/issues"
+  },
+  "homepage": "https://github.com/richardvenneman/floatl"
+}

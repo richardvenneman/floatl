@@ -1,10 +1,10 @@
 # Floatl
 
-A simple JavaScript library implementing the [Floating Label Pattern](http://mds.is/float-label-pattern/).
+A library agnostic, pragmatic implementation of the [Float Label Pattern](http://mds.is/float-label-pattern/).
 
 ## Motivations
 
-There are several libraries available which implement the Floating Label Pattern, most notably [floatlabels.js](https://github.com/clubdesign/floatlabels.js) and [FloatLabel.js](https://github.com/m10l/FloatLabel.js). These libraries didn't quit fit the requisites I had in mind:
+There are several libraries available which implement the Float Label Pattern, most notably [floatlabels.js](https://github.com/clubdesign/floatlabels.js) and [FloatLabel.js](https://github.com/m10l/FloatLabel.js). These libraries didn't quit fit the requisites I had in mind:
 
 - Pragmatic approach
 - Textarea support

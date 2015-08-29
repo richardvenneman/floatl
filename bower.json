@@ -1,0 +1,26 @@
+{
+  "name": "floatl",
+  "version": "0.0.0",
+  "authors": [
+    "Richard Venneman <richardvenneman@me.com>"
+  ],
+  "description": "A library agnostic, pragmatic implementation of the Float Label Pattern",
+  "main": "['dist/js/floatl.js dist/css/floatl.css']",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "floatlabelpattern",
+    "float",
+    "label"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/richardvenneman/floatl",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

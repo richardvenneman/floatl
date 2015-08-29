@@ -30,7 +30,7 @@ gulp.task('css', function () {
 
 gulp.task('coffee', function() {
   gulp.src('lib/coffee/*.coffee')
-    .pipe(coffee({ bare: true }).on('error', gutil.log))
+    .pipe(coffee({ header: true, bare: true }).on('error', gutil.log))
     .pipe(gulp.dest('dist/js/'))
     .pipe(uglify())
     .pipe(rename({ extname: '.min.js' }))

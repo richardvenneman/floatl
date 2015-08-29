@@ -1,19 +1,17 @@
 var gulp = require('gulp');
 var gutil = require('gulp-util');
-var mocha = require('gulp-mocha');
-var sass = require('gulp-sass');
-var coffee = require('gulp-coffee');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
+var buffer = require('gulp-buffer');
+
+var sass = require('gulp-sass');
+
+var source = require('vinyl-source-stream');
+var browserify = require('browserify');
+var coffeeify = require('coffeeify');
 
 gulp.task('default', function() {
-  gulp.start('test');
-});
-
-gulp.task('test', function() {
-  return gulp.src(['test/*.js'], { read: false })
-    .pipe(mocha({ reporter: 'list' }))
-    .on('error', gutil.log);
+  gulp.start('build');
 });
 
 gulp.task('css', function () {
@@ -29,10 +27,22 @@ gulp.task('css', function () {
 });
 
 gulp.task('coffee', function() {
-  gulp.src('lib/coffee/*.coffee')
-    .pipe(coffee({ header: true, bare: true }).on('error', gutil.log))
-    .pipe(gulp.dest('dist/js/'))
+  var b = browserify({
+    debug: true,
+    entries: ['./lib/coffee/floatl.coffee'],
+    transform: [coffeeify]
+  });
+
+  return b.bundle()
+    .pipe(source('floatl.js'))
+    .pipe(buffer())
+    .pipe(gulp.dest('./dist/js'))
     .pipe(uglify())
     .pipe(rename({ extname: '.min.js' }))
-    .pipe(gulp.dest('dist/js'));
+    .pipe(gulp.dest('./dist/js'))
+    .on('error', gutil.log);
+});
+
+gulp.task('build', ['css', 'coffee'], function() {
+
 });

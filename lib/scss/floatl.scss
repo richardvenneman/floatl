@@ -1,0 +1,30 @@
+@import "bourbon";
+
+.floatl {
+  position: relative;
+}
+
+.floatl input, .floatl textarea {
+  @include transition(all .175s ease-in-out);
+
+  padding: 1.2em .5em .5em .5em;
+}
+
+.floatl__label {
+  @include position(absolute, .5em null null .5em);
+  @include transition(all .175s ease-in-out);
+
+  opacity: 0;
+  font-size: .8em;
+  font-weight: bold;
+  color: hsl(0, 0%, 66%);
+}
+
+.floatl--active .floatl__label {
+  opacity: 1;
+  top: .35em;
+}
+
+.floatl--active.floatl--focused .floatl__label {
+  color: inherit;
+}

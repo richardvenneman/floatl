@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "browserify": "^11.0.1",
-    "chai": "^3.2.0",
+    "coffee-script": "^1.9.3",
     "coffeeify": "^1.1.0",
     "gulp": "^3.9.0",
     "gulp-buffer": "0.0.2",
@@ -20,13 +20,10 @@
     "gulp-sass": "^2.0.4",
     "gulp-uglify": "^1.4.0",
     "gulp-util": "^3.0.6",
-    "jsdom": "^3.1.2",
     "node-bourbon": "^4.2.3",
     "vinyl-source-stream": "^1.1.0"
   },
-  "scripts": {
-    "test": "gulp test"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/richardvenneman/floatl"

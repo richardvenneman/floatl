@@ -3,17 +3,14 @@ module.exports = function(config) {
     basePath: '',
     frameworks: ['browserify', 'jasmine'],
     files: [
-      'lib/**/*.coffee',
-      'test/**/*Test.coffee'
+      { pattern: 'node_modules/jquery/dist/jquery.js', watched: false },
+      { pattern: 'node_modules/jasmine-jquery/lib/jasmine-jquery.js', watched: false },
+      'lib/coffee/floatl.coffee',
+      'test/floatlTest.coffee'
     ],
-    exclude: [],
     preprocessors: {
-      'lib/**/*.coffee': ['browserify'],
-      'test/*.coffee': ['coffee'],
-    },
-    browserify: {
-      debug: true,
-      transform: ['coffeeify']
+      'lib/coffee/floatl.coffee': ['browserify'],
+      'test/floatlTest.coffee': ['browserify']
     },
     reporters: ['progress', 'notify'],
     port: 9876,
@@ -21,6 +18,12 @@ module.exports = function(config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['PhantomJS'],
-    singleRun: false
-  })
+    singleRun: false,
+
+    // Browserify
+    browserify: {
+      debug: true,
+      transform: ['coffeeify']
+    }
+  });
 }

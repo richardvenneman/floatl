@@ -31,6 +31,7 @@
     "karma-jasmine": "^0.3.6",
     "karma-notify-reporter": "^0.1.1",
     "karma-phantomjs-launcher": "^0.2.1",
+    "karma-scss-preprocessor": "^1.0.0",
     "node-bourbon": "^4.2.3",
     "phantomjs": "^1.9.18",
     "vinyl-source-stream": "^1.1.0"

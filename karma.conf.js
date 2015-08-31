@@ -5,10 +5,12 @@ module.exports = function(config) {
     files: [
       { pattern: 'node_modules/jquery/dist/jquery.js', watched: false },
       { pattern: 'node_modules/jasmine-jquery/lib/jasmine-jquery.js', watched: false },
+      'lib/scss/floatl.scss',
       'lib/coffee/floatl.coffee',
       'test/floatlTest.coffee'
     ],
     preprocessors: {
+      'lib/scss/floatl.scss': ['scss'],
       'lib/coffee/floatl.coffee': ['browserify'],
       'test/floatlTest.coffee': ['browserify']
     },
@@ -24,6 +26,15 @@ module.exports = function(config) {
     browserify: {
       debug: true,
       transform: ['coffeeify']
+    },
+
+    // SCSS
+    scssPreprocessor: {
+      options: {
+        sourceMap: true,
+        includePaths: require('node-bourbon').includePaths
+      }
     }
+
   });
 }

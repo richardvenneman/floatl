@@ -12,14 +12,34 @@ A library agnostic, pragmatic implementation of the [Float Label Pattern](http:/
 
 ## Usage
 
-If you use a module bundler such as Browserify or Webpack, you can simply require the `floatl` package:
+First make sure the script is loaded. If you use a module bundler such as Browserify or Webpack, you can simply require the `floatl` package, otherwise just include the script on your webpage.
 
-```javascript
-var floatl = require('floatl')
+Markup your `input` or `textarea` element with the floatl classes:
+
+```html
+<div class="floatl js-floatl">
+  <label class="floatl__label">First name</label>
+  <input class="floatl__input" placeholder="First name" type="text"></div>
+</div>
 ```
 
+Instantiate Floatl by passing in a DOM element:
 
-## Usage with Rails
+```javascript
+var element = document.querySelectorAll('js-floatl')[0];
+
+// Module approach
+var floatl = require('float');
+new floatl(element);
+
+// Regular approach with the global Floatl function
+new Floatl(element);
+
+// When using jQuery, pass in the actual DOM method
+new Floatl($('.js-floatl).get(0))
+```
+
+### Usage with Rails
 
 Since this project embraces Bower and is properly tagged, you can install use it in your Rails project with [rails-assets](https://www.rails-assets.org).
 

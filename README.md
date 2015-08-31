@@ -36,7 +36,7 @@ new floatl(element);
 new Floatl(element);
 
 // When using jQuery, pass in the actual DOM method
-new Floatl($('.js-floatl).get(0))
+new Floatl($('.js-floatl').get(0))
 ```
 
 ### Usage with Rails

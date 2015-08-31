@@ -34,6 +34,5 @@ module.exports = function(config) {
         sourceMap: true
       }
     }
-
   });
-}
+};

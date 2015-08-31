@@ -12,10 +12,10 @@ module.exports = function(config) {
       'lib/coffee/floatl.coffee': ['browserify'],
       'test/floatlTest.coffee': ['browserify']
     },
-    reporters: ['progress', 'notify'],
+    reporters: ['progress', 'clear-screen', 'notify'],
     port: 9876,
     colors: true,
-    logLevel: config.LOG_INFO,
+    logLevel: config.LOG_WARN,
     autoWatch: true,
     browsers: ['PhantomJS'],
     singleRun: false,

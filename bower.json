@@ -5,8 +5,9 @@
     "Richard Venneman <richardvenneman@me.com>"
   ],
   "description": "A library agnostic, pragmatic implementation of the Float Label Pattern",
-  "main": "['dist/js/floatl.js dist/css/floatl.css']",
+  "main": ["lib/coffee/floatl.coffee", "lib/scss/floatl.scss"],
   "moduleType": [
+    "node",
     "globals"
   ],
   "keywords": [
@@ -20,7 +21,6 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "test",
-    "tests"
+    "test"
   ]
 }

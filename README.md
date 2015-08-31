@@ -10,10 +10,6 @@ A library agnostic, pragmatic implementation of the [Float Label Pattern](http:/
 - Supports textfields and textareas
 - Customizable plain CSS styling
 
-## Browser support
-
-The CSS is [Autoprefixed](https://github.com/postcss/autoprefixer) with the following string: `"> 5%, ie >= 8"`. While the JavaScript supports IE8+, Floatl aims to be good at Floating Labels and only that. The Floating Labels Pattern works best with placeholders and it is therefor recommended to install legacy browser placeholder support should you need it, for example [Placekeeper](https://github.com/kristerkari/placekeeper) or [Placeholders.js](https://github.com/jamesallardice/Placeholders.js).
-
 ## Usage
 
 First make sure the script is loaded. If you use a module bundler such as Browserify or Webpack, you can simply require the `floatl` package, otherwise just include the script on your webpage.
@@ -46,6 +42,10 @@ new Floatl($('.js-floatl).get(0))
 ### Usage with Rails
 
 Since this project embraces Bower and is properly tagged, you can install use it in your Rails project with [rails-assets](https://www.rails-assets.org).
+
+## Browser support
+
+The CSS is [Autoprefixed](https://github.com/postcss/autoprefixer) with the following string: `"> 5%, ie >= 8"`. While the JavaScript supports IE8+, Floatl aims to be good at Floating Labels and only that. The Floating Labels Pattern works best with placeholders and it is therefor recommended to install legacy browser placeholder support should you need it, for example [Placekeeper](https://github.com/kristerkari/placekeeper) or [Placeholders.js](https://github.com/jamesallardice/Placeholders.js).
 
 ## Motivations
 

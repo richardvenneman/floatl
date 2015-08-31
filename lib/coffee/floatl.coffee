@@ -14,11 +14,13 @@ module.exports = class Floatl
       @removeClass(@element, FOCUSED_CLASS)
 
     for event in ['keyup', 'blur', 'change']
-      @addEventListener @input, event, (e) =>
-        if @input.value is ''
-          @removeClass(@element, ACTIVE_CLASS)
-        else
-          @addClass(@element, ACTIVE_CLASS)
+      @addEventListener @input, event, @handleChange
+
+  handleChange: (event) =>
+    if @input.value is ''
+      @removeClass(@element, ACTIVE_CLASS)
+    else
+      @addClass(@element, ACTIVE_CLASS)
 
   # Utility functions #
   #####################

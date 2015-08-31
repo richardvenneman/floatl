@@ -1,5 +1,3 @@
-@import "bourbon";
-
 $duration: 175ms;
 $delay: 200ms;
 
@@ -19,9 +17,10 @@ $delay: 200ms;
 }
 
 .floatl__label {
-  @include position(absolute, .5em null null .5em);
-  @include transition(all $duration ease-in-out $delay);
-
+  transition: all $duration ease-in-out $delay;
+  position: absolute;
+  top: .5em;
+  left: .5em;
   opacity: 0;
   font-size: .8em;
   font-weight: bold;

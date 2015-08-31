@@ -31,8 +31,7 @@ module.exports = function(config) {
     // SCSS
     scssPreprocessor: {
       options: {
-        sourceMap: true,
-        includePaths: require('node-bourbon').includePaths
+        sourceMap: true
       }
     }
 

@@ -5,6 +5,7 @@ var rename = require('gulp-rename');
 
 // Style dependencies
 var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
 
 // Build dependencies
 var buffer = require('gulp-buffer');
@@ -36,10 +37,8 @@ gulp.task('js', function() {
 
 gulp.task('css', function() {
   gulp.src('./lib/scss/*.scss')
-    .pipe(sass({
-      includePaths: require('node-bourbon').includePaths,
-      outputStyle: 'expanded'
-    }).on('error', sass.logError))
+    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+    .pipe(autoprefixer({ browsers: ['> 5%', 'ie >= 8'] }))
     .pipe(gulp.dest('dist/css'))
     .pipe(sass({ outputStyle: 'compressed' }))
     .pipe(rename({ extname: '.min.css' }))

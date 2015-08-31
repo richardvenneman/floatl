@@ -8,7 +8,11 @@ A library agnostic, pragmatic implementation of the [Float Label Pattern](http:/
 - CommonJS compatible
 - Library agnostic (no jQuery dependency)
 - Supports textfields and textareas
-- Customizable CSS styling
+- Customizable plain CSS styling
+
+## Browser support
+
+The CSS is [Autoprefixed](https://github.com/postcss/autoprefixer) with the following string: `"> 5%, ie >= 8"`. While the JavaScript supports IE8+, Floatl aims to be good at Floating Labels and only that. The Floating Labels Pattern works best with placeholders and it is therefor recommended to install legacy browser placeholder support should you need it, for example [Placekeeper](https://github.com/kristerkari/placekeeper) or [Placeholders.js](https://github.com/jamesallardice/Placeholders.js).
 
 ## Usage
 
@@ -49,7 +53,6 @@ There are several libraries available which implement the Float Label Pattern, m
 
 ## TODO
 
-- Remove Bourbon dependency, utilise gulp-autoprefixer
 - Auto bind elements with js-floatl class
 
 ## Development & testing

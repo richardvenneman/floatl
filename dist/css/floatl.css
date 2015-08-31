@@ -12,12 +12,11 @@
 }
 
 .floatl__label {
-  position: absolute;
-  top: 0.5em;
-  left: 0.5em;
   -webkit-transition: all 175ms ease-in-out 200ms;
-  -moz-transition: all 175ms ease-in-out 200ms;
-  transition: all 175ms ease-in-out 200ms;
+          transition: all 175ms ease-in-out 200ms;
+  position: absolute;
+  top: .5em;
+  left: .5em;
   opacity: 0;
   font-size: .8em;
   font-weight: bold;

@@ -2,6 +2,9 @@
 
 A library agnostic, pragmatic implementation of the [Float Label Pattern](http://mds.is/float-label-pattern/).
 
+[![NPM](https://img.shields.io/npm/v/floatl.svg?style=flat-square)](https://www.npmjs.com/package/floatl)
+![Bower](https://img.shields.io/bower/v/floatl.svg?style=flat-square)
+
 ## Features
 
 - Supports IE8+ (and modern browsers)
@@ -55,6 +58,16 @@ There are several libraries available which implement the Float Label Pattern, m
 
 - Auto bind elements with js-floatl class
 
+## Contributing
+
+Everyone is encouraged to help improve this project. Here are a few ways you can help:
+
+- Report bugs
+- Fix bugs and submit pull requests
+- Write, clarify, or fix documentation
+- Suggest or add new features
+- Write missing tests
+
 ## Development & testing
 
 This project uses [Jasmine](http://jasmine.github.io) with the [Karma Test Runner](http://karma-runner.github.io/).
@@ -64,3 +77,7 @@ This project uses [Jasmine](http://jasmine.github.io) with the [Karma Test Runne
 - Add tests in `test/floatlTest.coffee` and implementation in `lib/coffee/floatl.coffee`
 
 As mentioned in the [Karma installation instructions](http://karma-runner.github.io/0.13/intro/installation.html) you can also install `karma-cli` globally with `npm install -g karma-cli`. After installation you can run Karma simply by typing `karma`.
+
+## License
+
+This library is released under the [MIT License](http://www.opensource.org/licenses/MIT).

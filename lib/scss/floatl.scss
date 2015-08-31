@@ -1,18 +1,26 @@
 @import "bourbon";
 
+$duration: 175ms;
+$delay: 200ms;
+
 .floatl {
   position: relative;
 }
 
-.floatl input, .floatl textarea {
-  @include transition(all .175s ease-in-out);
+.floatl--active {
+  .floatl__label {
+    opacity: 1;
+    top: .35em;
+  }
 
-  padding: 1.2em .5em .5em .5em;
+  &.floatl--focused .floatl__label {
+    color: inherit;
+  }
 }
 
 .floatl__label {
   @include position(absolute, .5em null null .5em);
-  @include transition(all .175s ease-in-out);
+  @include transition(all $duration ease-in-out $delay);
 
   opacity: 0;
   font-size: .8em;
@@ -20,11 +28,6 @@
   color: hsl(0, 0%, 66%);
 }
 
-.floatl--active .floatl__label {
-  opacity: 1;
-  top: .35em;
-}
-
-.floatl--active.floatl--focused .floatl__label {
-  color: inherit;
+.floatl__input {
+  padding: 1.2em .5em .5em .5em;
 }

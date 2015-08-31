@@ -19,8 +19,8 @@ module.exports = function(config) {
     colors: true,
     logLevel: config.LOG_WARN,
     autoWatch: true,
-    browsers: ['PhantomJS'],
-    singleRun: false,
+    browsers: [(process.env.TRAVIS_CI === 'true'? 'Firefox' : 'PhantomJS')],
+    singleRun: process.env.TRAVIS_CI === 'true',
 
     // Browserify
     browserify: {

@@ -5,6 +5,7 @@ A library agnostic, pragmatic implementation of the [Float Label Pattern](http:/
 [![NPM](https://img.shields.io/npm/v/floatl.svg?style=flat-square)](https://www.npmjs.com/package/floatl)
 ![Bower](https://img.shields.io/bower/v/floatl.svg?style=flat-square)
 [![Build Status](https://img.shields.io/travis/richardvenneman/floatl/master.svg?style=flat-square)](https://travis-ci.org/richardvenneman/floatl)
+[![Gemnasium](https://img.shields.io/gemnasium/richardvenneman/floatl.svg?style=flat-square)](https://gemnasium.com/richardvenneman/floatl)
 
 ## Features
 

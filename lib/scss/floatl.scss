@@ -8,7 +8,7 @@ $delay: 200ms;
 .floatl--active {
   .floatl__label {
     opacity: 1;
-    top: .35em;
+    top: 1px;
   }
 
   &.floatl--focused .floatl__label {
@@ -18,15 +18,27 @@ $delay: 200ms;
 
 .floatl__label {
   transition: all $duration ease-in-out $delay;
-  position: absolute;
-  top: .5em;
-  left: .5em;
   opacity: 0;
-  font-size: .8em;
+  position: absolute;
+  display: block;
+  top: 9px;
+  left: 6px;
+  padding: 4px 3px 3px 3px;
+  font-size: 11px;
+  line-height: 1em;
   font-weight: bold;
-  color: hsl(0, 0%, 66%);
+  color: hsl(203, 9%, 34%);
+  background-color: white;
+  background: linear-gradient(to bottom, rgba(white, .95) 0%,
+                                         rgba(white, .95) 80%,
+                                         rgba(white, 0) 100%);
 }
 
 .floatl__input {
-  padding: 1.2em .5em .5em .5em;
+  margin-top: 0;
+  margin-left: 0;
+  padding: 17px 8px 5px 8px;
+  font-size: 15px;
+  border: 1px solid hsl(0, 0%, 90%);
+  border-radius: 3px;
 }

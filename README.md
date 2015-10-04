@@ -7,6 +7,8 @@ A library agnostic, pragmatic implementation of the [Float Label Pattern](http:/
 [![Build Status](https://img.shields.io/travis/richardvenneman/floatl/master.svg?style=flat-square)](https://travis-ci.org/richardvenneman/floatl)
 [![Gemnasium](https://img.shields.io/gemnasium/richardvenneman/floatl.svg?style=flat-square)](https://gemnasium.com/richardvenneman/floatl)
 
+Example: http://richardvenneman.github.io/floatl/example
+
 ## Features
 
 - Browser support all the way down to IE8

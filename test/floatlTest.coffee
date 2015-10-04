@@ -23,15 +23,15 @@ describe 'Floatl', ->
     done()
 
   describe 'Initialization', ->
-    it 'throws on passing in a non-DOM element', ->
+    it 'throws on instantiates with a non-DOM element', ->
       init = -> new floatl('test')
       expect(init).toThrowError(TypeError)
 
-    it 'initiates with a HTML element', ->
+    it 'instantiates with a HTML element', ->
       init = => new floatl(@$floatl.get(0))
       expect(init).not.toThrow()
 
-    it 'supports passing in a jQuery object', ->
+    it 'instantiates with a jQuery object', ->
       init = => new floatl(@$floatl)
       expect(init).not.toThrow()
 

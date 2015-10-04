@@ -22,7 +22,7 @@ First make sure the script is loaded. If you use a module bundler such as Browse
 Markup your `input` or `textarea` element with the floatl classes:
 
 ```html
-<div class="floatl js-floatl">
+<div class="floatl">
   <label class="floatl__label">First name</label>
   <input class="floatl__input" placeholder="First name" type="text"></div>
 </div>
@@ -50,7 +50,9 @@ Since this project embraces Bower and is properly tagged, you can install use it
 
 ## Browser support
 
-The CSS is [Autoprefixed](https://github.com/postcss/autoprefixer) with the following string: `"> 5%, ie >= 8"`. While the JavaScript supports IE8+, Floatl aims to be good at Floating Labels and only that. The Floating Labels Pattern works best with placeholders and it is therefor recommended to install legacy browser placeholder support should you need it, for example [Placekeeper](https://github.com/kristerkari/placekeeper) or [Placeholders.js](https://github.com/jamesallardice/Placeholders.js).
+The CSS is [Autoprefixed](https://github.com/postcss/autoprefixer) with the following string: `"> 5%, ie >= 8"`.
+
+While the JavaScript supports IE8+, Floatl aims to be good at Floating Labels and only that. The Floating Labels Pattern works best with placeholders and it is therefor recommended to install legacy browser placeholder support should you need it, for example [Placekeeper](https://github.com/kristerkari/placekeeper) or [Placeholders.js](https://github.com/jamesallardice/Placeholders.js).
 
 ## Motivations
 
@@ -58,7 +60,7 @@ There are several libraries available which implement the Float Label Pattern, m
 
 ## TODO
 
-- Auto bind elements with js-floatl class
+- Examples
 
 ## Contributing
 

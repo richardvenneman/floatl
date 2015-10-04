@@ -7,7 +7,7 @@ A library agnostic, pragmatic implementation of the [Float Label Pattern](http:/
 [![Build Status](https://img.shields.io/travis/richardvenneman/floatl/master.svg?style=flat-square)](https://travis-ci.org/richardvenneman/floatl)
 [![Gemnasium](https://img.shields.io/gemnasium/richardvenneman/floatl.svg?style=flat-square)](https://gemnasium.com/richardvenneman/floatl)
 
-Example: http://richardvenneman.github.io/floatl/example
+Example: https://richardvenneman.github.io/floatl/example
 
 ## Features
 
@@ -59,10 +59,6 @@ While the JavaScript supports IE8+, Floatl aims to be good at Floating Labels an
 ## Motivations
 
 There are several libraries available which implement the Float Label Pattern, most notably [floatlabels.js](https://github.com/clubdesign/floatlabels.js) and [FloatLabel.js](https://github.com/m10l/FloatLabel.js). However, these libraries didn't quit fit the requisites I had in mind (see features above) and I didn't find any Bower compatible libraries when I started this project. Furthermore I'd like to use a well-maintained library. Since we're using this library in production at [Cityspotters](https://www.cityspotters.com) I'm keeping this library up to date.
-
-## TODO
-
-- Examples
 
 ## Contributing
 

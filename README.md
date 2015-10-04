@@ -9,7 +9,7 @@ A library agnostic, pragmatic implementation of the [Float Label Pattern](http:/
 
 ## Features
 
-- Supports IE8+ (and modern browsers)
+- Browser support all the way down to IE8
 - CommonJS compatible
 - Library agnostic (no jQuery dependency)
 - Supports textfields and textareas
@@ -17,7 +17,7 @@ A library agnostic, pragmatic implementation of the [Float Label Pattern](http:/
 
 ## Usage
 
-First make sure the script is loaded. If you use a module bundler such as Browserify or Webpack, you can simply require the `floatl` package, otherwise just include the script on your webpage.
+First make sure the script is loaded. If you use a module bundler such as Browserify or Webpack, you can simply require the `floatl` package, otherwise include the script on your webpage.
 
 Markup your `input` or `textarea` element with the floatl classes:
 

@@ -12,7 +12,7 @@ module.exports = Floatl = (function() {
   function Floatl(element) {
     this.handleChange = bind(this.handleChange, this);
     var event, i, len, ref;
-    this.element = element;
+    this.element = this.getElement(element);
     this.label = this.element.querySelectorAll('.floatl__label')[0];
     this.input = this.element.querySelectorAll('.floatl__input')[0];
     this.addEventListener(this.input, 'focus', (function(_this) {
@@ -31,6 +31,16 @@ module.exports = Floatl = (function() {
       this.addEventListener(this.input, event, this.handleChange);
     }
   }
+
+  Floatl.prototype.getElement = function(el) {
+    if (el.tagName != null) {
+      return el;
+    } else if ((typeof jQuery !== "undefined" && jQuery !== null) && el instanceof jQuery) {
+      return el.get(0);
+    } else {
+      throw new TypeError(el + " 'is not a valid element. Valid options are: DOM Element, jQuery.'");
+    }
+  };
 
   Floatl.prototype.handleChange = function(event) {
     if (this.input.value === '') {

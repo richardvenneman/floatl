@@ -3,7 +3,7 @@ module.exports = class Floatl
   ACTIVE_CLASS = 'floatl--active'
 
   constructor: (element) ->
-    @element = element
+    @element = @getElement(element)
     @label = @element.querySelectorAll('.floatl__label')[0]
     @input = @element.querySelectorAll('.floatl__input')[0]
 
@@ -16,14 +16,22 @@ module.exports = class Floatl
     for event in ['keyup', 'blur', 'change']
       @addEventListener @input, event, @handleChange
 
+  getElement: (el) ->
+    if el.tagName?
+      return el
+    else if jQuery? and el instanceof jQuery
+      return el.get(0)
+    else
+      throw new TypeError("#{el} 'is not a valid element. Valid options are: DOM Element, jQuery.'")
+
   handleChange: (event) =>
     if @input.value is ''
       @removeClass(@element, ACTIVE_CLASS)
     else
       @addClass(@element, ACTIVE_CLASS)
 
-  # Utility functions #
-  #####################
+  # Utility functions
+  ###################
 
   addClass: (el, className) ->
     if el.classList

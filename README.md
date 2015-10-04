@@ -40,8 +40,8 @@ new floatl(element);
 // Regular approach with the global Floatl function
 new Floatl(element);
 
-// When using jQuery, pass in the actual DOM method
-new Floatl($('.js-floatl').get(0))
+// When using jQuery, you can pass in the jQuery object
+new Floatl($('.js-floatl'))
 ```
 
 ### Usage with Rails

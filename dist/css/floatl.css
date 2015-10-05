@@ -2,38 +2,65 @@
   position: relative;
 }
 
+.floatl--focused .floatl__label {
+  color: #2a8dea;
+}
+
 .floatl--active .floatl__label {
   opacity: 1;
+  visibility: visible;
   top: 1px;
-}
-
-.floatl--active.floatl--focused .floatl__label {
-  color: inherit;
-}
-
-.floatl__label {
-  -webkit-transition: all 175ms ease-in-out 200ms;
-          transition: all 175ms ease-in-out 200ms;
-  opacity: 0;
-  position: absolute;
-  display: block;
-  top: 9px;
-  left: 6px;
-  padding: 4px 3px 3px 3px;
-  font-size: 11px;
-  line-height: 1em;
-  font-weight: bold;
-  color: #4f595f;
   background-color: white;
   background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 80%, rgba(255, 255, 255, 0) 100%);
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 80%, rgba(255, 255, 255, 0) 100%);
 }
 
+.floatl--active .floatl__input {
+  padding: 17px 8px 5px 8px;
+}
+
+.floatl__label {
+  -webkit-transition: all 200ms ease-in-out;
+          transition: all 200ms ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  display: inline-block;
+  top: 9px;
+  left: 6px;
+  padding: 5px 3px 3px 3px;
+  font-size: 10px;
+  line-height: 1em;
+  font-weight: bold;
+  color: #666666;
+}
+
 .floatl__input {
+  -webkit-transition: all 200ms ease-in-out;
+          transition: all 200ms ease-in-out;
+  outline: none;
   margin-top: 0;
   margin-left: 0;
-  padding: 17px 8px 5px 8px;
+  padding: 11px 8px;
   font-size: 15px;
   border: 1px solid #e6e6e6;
   border-radius: 3px;
+}
+
+.floatl__input::-moz-selection {
+  color: white;
+  background-color: #2a8dea;
+}
+
+.floatl__input::selection {
+  color: white;
+  background-color: #2a8dea;
+}
+
+.floatl__input:focus {
+  border-color: #2a8dea;
+}
+
+input.floatl__input {
+  height: 42px;
 }

@@ -1,44 +1,68 @@
-$duration: 175ms;
-$delay: 200ms;
+$duration: 200ms;
+$border-color: hsl(0, 0%, 90%);
+$text-color: hsl(0, 0%, 40%);
+$background-color: white;
+$active-color: hsl(209, 82%, 54%);
 
 .floatl {
   position: relative;
 }
 
+.floatl--focused .floatl__label {
+  color: $active-color;
+}
+
 .floatl--active {
   .floatl__label {
     opacity: 1;
+    visibility: visible;
     top: 1px;
+    background-color: $background-color;
+    background: linear-gradient(to bottom, rgba(white, .95) 0%,
+                                           rgba(white, .95) 80%,
+                                           rgba(white, 0) 100%);
   }
 
-  &.floatl--focused .floatl__label {
-    color: inherit;
+  .floatl__input {
+    padding: 17px 8px 5px 8px;
   }
 }
 
 .floatl__label {
-  transition: all $duration ease-in-out $delay;
+  transition: all $duration ease-in-out;
+  visibility: hidden;
   opacity: 0;
   position: absolute;
-  display: block;
+  display: inline-block;
   top: 9px;
   left: 6px;
-  padding: 4px 3px 3px 3px;
-  font-size: 11px;
+  padding: 5px 3px 3px 3px;
+  font-size: 10px;
   line-height: 1em;
   font-weight: bold;
-  color: hsl(203, 9%, 34%);
-  background-color: white;
-  background: linear-gradient(to bottom, rgba(white, .95) 0%,
-                                         rgba(white, .95) 80%,
-                                         rgba(white, 0) 100%);
+  color: $text-color;
 }
 
 .floatl__input {
+  transition: all $duration ease-in-out;
+  outline: none;
   margin-top: 0;
   margin-left: 0;
-  padding: 17px 8px 5px 8px;
+  padding: 11px 8px;
   font-size: 15px;
-  border: 1px solid hsl(0, 0%, 90%);
+  border: 1px solid $border-color;
   border-radius: 3px;
+
+  &::selection {
+    color: white;
+    background-color: $active-color;
+  }
+
+  &:focus {
+    border-color: $active-color;
+  }
+}
+
+input.floatl__input {
+  height: 42px;
 }

@@ -23,7 +23,7 @@ Online example: https://richardvenneman.github.io/floatl/example
 
 First make sure the script is loaded. If you use a module bundler such as Browserify or Webpack, you can simply require the `floatl` package, otherwise include the script on your webpage.
 
-Markup your `input` or `textarea` element with the floatl classes:
+Markup your `label` and `input` or `textarea` with the floatl classes and wrap them in an element with the `floatl` class:
 
 ```html
 <div class="floatl">

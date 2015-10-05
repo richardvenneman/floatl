@@ -52,14 +52,14 @@ new Floatl($('.js-floatl'))
 
 Since this project embraces Bower and is properly tagged, you can install use it in your Rails project with [rails-assets](https://rails-assets.org). When using rails-assets, include the built (non-module) version which is distributed via Bower as well:
 
-```javascript
-// application.js
-//= require floatl/dist/js/floatl.js
+```coffee
+# application.js.coffee
+#= require floatl/dist/js/floatl.js
 ```
 
-```css
-/* application.css */
-*= require floatl/dist/css/floatl.scss
+```sass
+// application.css.scss
+//= require floatl/dist/css/floatl.scss
 ```
 
 ### CSS styling

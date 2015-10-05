@@ -1,11 +1,16 @@
 {
   "name": "floatl",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "authors": [
     "Richard Venneman <richardvenneman@me.com>"
   ],
   "description": "A library agnostic, pragmatic implementation of the Float Label Pattern",
-  "main": ["lib/coffee/floatl.coffee", "lib/scss/floatl.scss"],
+  "main": [
+    "lib/coffee/floatl.coffee",
+    "lib/scss/floatl.scss",
+    "dist/js/floatl.js",
+    "dist/css/floatl.css"
+  ],
   "moduleType": [
     "node",
     "globals"

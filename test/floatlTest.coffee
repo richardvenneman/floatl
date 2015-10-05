@@ -35,6 +35,12 @@ describe 'Floatl', ->
       init = => new floatl(@$floatl)
       expect(init).not.toThrow()
 
+    it 'adds floatl--active class if input has a value', ->
+      @$input.val('Initial value')
+      new floatl(@$floatl.get(0))
+
+      expect(@$floatl).toHaveClass(ACTIVE_CLASS)
+
   describe 'Focused state', ->
     it 'adds floatl--focused class on focus', ->
       new floatl(@$floatl.get(0))

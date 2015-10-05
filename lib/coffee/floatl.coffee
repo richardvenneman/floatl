@@ -16,6 +16,8 @@ module.exports = class Floatl
     for event in ['keyup', 'blur', 'change']
       @addEventListener @input, event, @handleChange
 
+    @handleChange()
+
   getElement: (el) ->
     if el.tagName?
       return el

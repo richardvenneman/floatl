@@ -30,6 +30,7 @@ module.exports = Floatl = (function() {
       event = ref[i];
       this.addEventListener(this.input, event, this.handleChange);
     }
+    this.handleChange();
   }
 
   Floatl.prototype.getElement = function(el) {

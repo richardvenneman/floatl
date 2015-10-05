@@ -62,6 +62,10 @@ Since this project embraces Bower and is properly tagged, you can install use it
 *= require floatl/dist/css/floatl.scss
 ```
 
+### CSS styling
+
+All styling (including transitions) is basically done by toggling CSS classes. Because of this it is easy to apply your own styling. Take a look at the [default styling](https://github.com/richardvenneman/floatl/blob/master/dist/css/floatl.css) to get an idea of where to override attributes.
+
 ## Browser support
 
 The CSS is [Autoprefixed](https://github.com/postcss/autoprefixer) with the following string: `"> 5%, ie >= 8"`.

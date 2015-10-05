@@ -33,15 +33,15 @@ body {
   margin: 5em auto;
   width: auto;
   width: 300px;
-  padding: 10px;
+  padding: 20px;
   background-color: white;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.03);
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 768px) {
   .container {
-    width: 400px;
-    padding: 20px;
+    width: 320px;
+    padding: 30px;
   }
 }
 
@@ -50,6 +50,11 @@ body {
 
 .form-elem {
   margin-bottom: .5em;
+}
+
+.form-elem input, .form-elem textarea {
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .form-elem:last-of-type {

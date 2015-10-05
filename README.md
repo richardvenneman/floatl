@@ -13,11 +13,12 @@ Online example: https://richardvenneman.github.io/floatl/example
 
 ## Features
 
-- Browser support all the way down to IE8
 - CommonJS compatible
 - Library agnostic (no jQuery dependency)
+- Small (just over 2 KB minified)
 - Supports textfields and textareas
 - Customizable plain CSS styling
+- Browser support all the way down to IE8
 
 ## Usage
 

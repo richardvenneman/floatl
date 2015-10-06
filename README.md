@@ -20,6 +20,20 @@ Online example: https://richardvenneman.github.io/floatl/example
 - Customizable plain CSS styling
 - Browser support all the way down to IE8
 
+## Installation
+
+Download the [built versions of the JavaScript and CSS files](https://github.com/richardvenneman/floatl/tree/master/dist) and include them in your app.
+
+You can also install Floatl via [NPM](https://www.npmjs.com/package/floatl) or [Bower](http://bower.io/search/?q=floatl):
+
+```bash
+npm install floatl --save
+
+# or
+
+bower install floatl --save
+```
+
 ## Usage
 
 First make sure the script is loaded. If you use a module bundler such as Browserify or Webpack, you can simply require the `floatl` package, otherwise include the script on your webpage.
@@ -49,9 +63,9 @@ new Floatl(element);
 new Floatl($('.js-floatl'))
 ```
 
-### Usage with Rails
+### Usage with Ruby on Rails
 
-Since this project embraces Bower and is properly tagged, you can install use it in your Rails project with [rails-assets](https://rails-assets.org). When using rails-assets, include the built (non-module) version which is distributed via Bower as well:
+You can use Floatl in your Rails project with [rails-assets](https://rails-assets.org). When using rails-assets, include the built (non-module) version which is also distributed via Bower:
 
 ```coffee
 # application.js.coffee

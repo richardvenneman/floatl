@@ -79,7 +79,7 @@ You can use Floatl in your Rails project with [rails-assets](https://rails-asset
 
 ### CSS styling
 
-All styling (including transitions) is basically done by toggling CSS classes. Because of this it is easy to apply your own styling. Take a look at the [default styling](https://github.com/richardvenneman/floatl/blob/master/dist/css/floatl.css) to get an idea of where to override attributes.
+All styling (including transitions) is basically done by toggling CSS classes. Because of this it is easy to apply your own styling. Take a look at the [default styling](https://github.com/richardvenneman/floatl/blob/master/dist/css/floatl.css) to get an idea of where to override attributes. Or check out this [Gist with example styling](https://gist.github.com/richardvenneman/cf64188aa645208c65c8) – we currently apply this on our site.
 
 ## Browser support
 

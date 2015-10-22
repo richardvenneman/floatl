@@ -91,6 +91,10 @@ While the JavaScript supports IE8+, Floatl aims to be good at Floating Labels an
 
 There are several libraries available that implement the Float Label Pattern, most notably [floatlabels.js](https://github.com/clubdesign/floatlabels.js) and [FloatLabel.js](https://github.com/m10l/FloatLabel.js). However, these libraries did not quite fulfill the requisites I had in mind (see features above) and I did not find any Bower compatible libraries when I started this project. Furthermore I like to use a well-maintained library. Since we're using this library in production at [Cityspotters](https://www.cityspotters.com) I'm keeping this library up to date.
 
+## TODO
+
+- Support auto binding of elements with `js-floatl` className
+
 ## Contributing
 
 Everyone is encouraged to help improve this project. Here are a few ways you can help:

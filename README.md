@@ -7,21 +7,38 @@ A library agnostic, pragmatic implementation of the [Float Label Pattern](http:/
 [![Build Status](https://img.shields.io/travis/richardvenneman/floatl/master.svg?style=flat-square)](https://travis-ci.org/richardvenneman/floatl)
 [![Gemnasium](https://img.shields.io/gemnasium/richardvenneman/floatl.svg?style=flat-square)](https://gemnasium.com/richardvenneman/floatl)
 
-Example: https://richardvenneman.github.io/floatl/example
+![Floatl](https://i.imgur.com/fjDfAcE.gif)
+
+Online example: https://richardvenneman.github.io/floatl/example
 
 ## Features
 
-- Browser support all the way down to IE8
 - CommonJS compatible
 - Library agnostic (no jQuery dependency)
+- Small (just over 2 KB minified)
 - Supports textfields and textareas
 - Customizable plain CSS styling
+- Browser support all the way down to IE8
+
+## Installation
+
+Download the [built versions of the JavaScript and CSS files](https://github.com/richardvenneman/floatl/tree/master/dist) and include them in your app.
+
+You can also install Floatl via [NPM](https://www.npmjs.com/package/floatl) or [Bower](http://bower.io/search/?q=floatl):
+
+```bash
+npm install floatl --save
+
+# or
+
+bower install floatl --save
+```
 
 ## Usage
 
 First make sure the script is loaded. If you use a module bundler such as Browserify or Webpack, you can simply require the `floatl` package, otherwise include the script on your webpage.
 
-Markup your `input` or `textarea` element with the floatl classes:
+Markup your `label` and `input` or `textarea` with the floatl classes and wrap them in an element with the `floatl` class:
 
 ```html
 <div class="floatl">
@@ -46,9 +63,23 @@ new Floatl(element);
 new Floatl($('.js-floatl'))
 ```
 
-### Usage with Rails
+### Usage with Ruby on Rails
 
-Since this project embraces Bower and is properly tagged, you can install use it in your Rails project with [rails-assets](https://www.rails-assets.org).
+You can use Floatl in your Rails project with [rails-assets](https://rails-assets.org). When using rails-assets, include the built (non-module) version which is also distributed via Bower:
+
+```coffee
+# application.js.coffee
+#= require floatl/dist/js/floatl.js
+```
+
+```sass
+// application.css.scss
+//= require floatl/dist/css/floatl.scss
+```
+
+### CSS styling
+
+All styling (including transitions) is basically done by toggling CSS classes. Because of this it is easy to apply your own styling. Take a look at the [default styling](https://github.com/richardvenneman/floatl/blob/master/dist/css/floatl.css) to get an idea of where to override attributes. Or check out this [Gist with example styling](https://gist.github.com/richardvenneman/cf64188aa645208c65c8) – we currently apply this on our site.
 
 ## Browser support
 
@@ -58,7 +89,11 @@ While the JavaScript supports IE8+, Floatl aims to be good at Floating Labels an
 
 ## Motivations
 
-There are several libraries available which implement the Float Label Pattern, most notably [floatlabels.js](https://github.com/clubdesign/floatlabels.js) and [FloatLabel.js](https://github.com/m10l/FloatLabel.js). However, these libraries didn't quit fit the requisites I had in mind (see features above) and I didn't find any Bower compatible libraries when I started this project. Furthermore I'd like to use a well-maintained library. Since we're using this library in production at [Cityspotters](https://www.cityspotters.com) I'm keeping this library up to date.
+There are several libraries available that implement the Float Label Pattern, most notably [floatlabels.js](https://github.com/clubdesign/floatlabels.js) and [FloatLabel.js](https://github.com/m10l/FloatLabel.js). However, these libraries did not quite fulfill the requisites I had in mind (see features above) and I did not find any Bower compatible libraries when I started this project. Furthermore I like to use a well-maintained library. Since we're using this library in production at [Cityspotters](https://www.cityspotters.com) I'm keeping this library up to date.
+
+## TODO
+
+- Support auto binding of elements with `js-floatl` className
 
 ## Contributing
 

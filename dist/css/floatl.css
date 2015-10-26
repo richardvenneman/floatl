@@ -38,6 +38,9 @@
 .floatl__input {
   -webkit-transition: all 200ms ease-in-out;
           transition: all 200ms ease-in-out;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   outline: none;
   margin-top: 0;
   margin-left: 0;

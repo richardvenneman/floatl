@@ -45,6 +45,7 @@ $active-color: hsl(209, 82%, 54%);
 
 .floatl__input {
   transition: all $duration ease-in-out;
+  appearance: none;
   outline: none;
   margin-top: 0;
   margin-left: 0;

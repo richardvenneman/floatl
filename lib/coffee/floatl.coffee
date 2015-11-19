@@ -1,6 +1,7 @@
 module.exports = class Floatl
   FOCUSED_CLASS = 'floatl--focused'
   ACTIVE_CLASS = 'floatl--active'
+  MULTILINE_CLASS = 'floatl--multiline'
 
   constructor: (element) ->
     @element = @getElement(element)
@@ -16,6 +17,7 @@ module.exports = class Floatl
     for event in ['keyup', 'blur', 'change']
       @addEventListener @input, event, @handleChange
 
+    @addClass(@element, MULTILINE_CLASS) if @input.tagName is 'TEXTAREA'
     @handleChange()
 
   getElement: (el) ->

@@ -3,6 +3,7 @@ floatl = require('../lib/coffee/floatl.coffee')
 describe 'Floatl', ->
   FOCUSED_CLASS = 'floatl--focused'
   ACTIVE_CLASS = 'floatl--active'
+  MULTILINE_CLASS = 'floatl--multiline'
 
   beforeEach (done) ->
     @$floatl = $('<div class="floatl">
@@ -40,6 +41,21 @@ describe 'Floatl', ->
       new floatl(@$floatl.get(0))
 
       expect(@$floatl).toHaveClass(ACTIVE_CLASS)
+
+    it 'does not add floatl--multiline class if applied to an input', ->
+      new floatl(@$floatl.get(0))
+
+      expect(@$floatl).not.toHaveClass(MULTILINE_CLASS)
+
+    it 'adds floatl--multiline class if applied to a textarea', ->
+      $floatl = $('<div class="floatl">
+        <label class="floatl__label">Label text</label>
+        <textarea class="floatl__input"></input>
+      </div>').appendTo($(document.body))
+
+      new floatl($floatl.get(0))
+
+      expect($floatl).toHaveClass(MULTILINE_CLASS)
 
   describe 'Focused state', ->
     it 'adds floatl--focused class on focus', ->

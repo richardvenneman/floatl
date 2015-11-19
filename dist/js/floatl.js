@@ -3,11 +3,13 @@ var Floatl,
   bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
 module.exports = Floatl = (function() {
-  var ACTIVE_CLASS, FOCUSED_CLASS;
+  var ACTIVE_CLASS, FOCUSED_CLASS, MULTILINE_CLASS;
 
   FOCUSED_CLASS = 'floatl--focused';
 
   ACTIVE_CLASS = 'floatl--active';
+
+  MULTILINE_CLASS = 'floatl--multiline';
 
   function Floatl(element) {
     this.handleChange = bind(this.handleChange, this);
@@ -29,6 +31,9 @@ module.exports = Floatl = (function() {
     for (i = 0, len = ref.length; i < len; i++) {
       event = ref[i];
       this.addEventListener(this.input, event, this.handleChange);
+    }
+    if (this.input.tagName === 'TEXTAREA') {
+      this.addClass(this.element, MULTILINE_CLASS);
     }
     this.handleChange();
   }

@@ -17,7 +17,6 @@ $active-color: hsl(209, 82%, 54%);
     opacity: 1;
     visibility: visible;
     top: 1px;
-    background-color: $background-color;
   }
 
   .floatl__input {
@@ -25,6 +24,7 @@ $active-color: hsl(209, 82%, 54%);
   }
 
   &.floatl--multiline .floatl__label {
+    background-color: $background-color;
     background: linear-gradient(to bottom, rgba(white, .95) 0%,
                                            rgba(white, .95) 80%,
                                            rgba(white, 0) 100%);

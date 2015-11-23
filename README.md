@@ -94,6 +94,7 @@ There are several libraries available that implement the Float Label Pattern, mo
 ## TODO
 
 - Support auto binding of elements with `js-floatl` className
+- Refactor CoffeeScript source file to ES6
 
 ## Contributing
 
@@ -106,6 +107,8 @@ Everyone is encouraged to help improve this project. Here are a few ways you can
 - Write missing tests
 
 ## Development & testing
+
+First install the dependencies with `npm install`. This project uses some [Gulp](http://gulpjs.com) tasks to build the CSS and JavaScript files. See the Gulpfile for more information.
 
 This project uses [Jasmine](http://jasmine.github.io) with the [Karma Test Runner](http://karma-runner.github.io/).
 

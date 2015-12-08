@@ -38,7 +38,7 @@ gulp.task('js', function() {
 gulp.task('css', function() {
   gulp.src('./lib/scss/*.scss')
     .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
-    .pipe(autoprefixer({ browsers: ['> 5%', 'ie >= 8'] }))
+    .pipe(autoprefixer({ browsers: ['> 3%', 'ie >= 8'] }))
     .pipe(gulp.dest('dist/css'))
     .pipe(sass({ outputStyle: 'compressed' }))
     .pipe(rename({ extname: '.min.css' }))

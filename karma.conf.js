@@ -1,18 +1,35 @@
+var webpackConfig = require('./webpack.config');
+
+webpackConfig.output = {
+  entry: './lib/js/floatl.js',
+  output: {
+    library: 'floatl',
+    libraryTarget: 'umd',
+    filename: 'dist/js/floatl.js'
+  }
+};
+
 module.exports = function(config) {
   config.set({
-    basePath: '',
-    frameworks: ['browserify', 'jasmine'],
+    frameworks: ['jasmine'],
+    plugins: [
+      'karma-webpack',
+      'karma-coffee-preprocessor',
+      'karma-jasmine',
+      'karma-phantomjs-launcher',
+      'karma-clear-screen-reporter',
+      'karma-notify-reporter'
+    ],
     files: [
       { pattern: 'node_modules/jquery/dist/jquery.js', watched: false },
       { pattern: 'node_modules/jasmine-jquery/lib/jasmine-jquery.js', watched: false },
-      'lib/scss/floatl.scss',
-      'lib/coffee/floatl.coffee',
-      'test/floatlTest.coffee'
+      { pattern: 'node_modules/jasmine-fixture/app/js/emmet.js', watched: false },
+      { pattern: 'node_modules/jasmine-fixture/app/js/jasmine-fixture.coffee', watched: false },
+      'test/*Test.js'
     ],
     preprocessors: {
-      'lib/scss/floatl.scss': ['scss'],
-      'lib/coffee/floatl.coffee': ['browserify'],
-      'test/floatlTest.coffee': ['browserify']
+      'test/*Test.js': ['webpack'],
+      '**/*.coffee': ['coffee']
     },
     reporters: ['progress', 'clear-screen', 'notify'],
     port: 9876,
@@ -22,11 +39,8 @@ module.exports = function(config) {
     browsers: [(process.env.TRAVIS_CI === 'true'? 'Firefox' : 'PhantomJS')],
     singleRun: process.env.TRAVIS_CI === 'true',
 
-    // Browserify
-    browserify: {
-      debug: true,
-      transform: ['coffeeify']
-    },
+    // Webpack
+    webpack: webpackConfig,
 
     // SCSS
     scssPreprocessor: {

@@ -6,8 +6,7 @@ const multilineClass = 'floatl--multiline';
 
 describe('getElement', () => {
   beforeEach(function() {
-    affix('#js-floatl.floatl label#js-label.floatl__label');
-    affix('#js-floatl.floatl input#js-input.floatl__input[type="text"]');
+    affix('#js-floatl.floatl label#js-label.floatl__label+input#js-input.floatl__input[type="text"]');
   });
 
   describe('Initialization', () => {
@@ -36,6 +35,44 @@ describe('getElement', () => {
       };
 
       expect(action).not.toThrow();
+    });
+
+    it(`adds %{activeClass} class if input has a value`, function() {
+      let element = document.getElementById('js-floatl');
+      let input = document.getElementById('js-input');
+      input.value = 'Initial value';
+
+      new Floatl(element);
+
+      expect(element).toHaveClass(activeClass);
+    });
+
+    it(`adds %{activeClass} class if input has a value`, function() {
+      let element = document.getElementById('js-floatl');
+      let input = document.getElementById('js-input');
+      input.value = 'Initial value';
+
+      new Floatl(element);
+
+      expect(element).toHaveClass(activeClass);
+    });
+
+    it(`does not add %{multilineClass} class if applied to an input`, function() {
+      let element = document.getElementById('js-floatl');
+
+      new Floatl(element);
+
+      expect(element).not.toHaveClass(multilineClass);
+    });
+
+    it(`adds %{multilineClass} class if applied to a textarea`, function() {
+      affix('#js-multiline-floatl.floatl label#js-label.floatl__label+textarea#js-input.floatl__input');
+
+      let element = document.getElementById('js-multiline-floatl');
+
+      new Floatl(element);
+
+      expect(element).toHaveClass(multilineClass);
     });
   });
 });

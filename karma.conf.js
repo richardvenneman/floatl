@@ -9,17 +9,11 @@ webpackConfig.output = {
   }
 };
 
+// NOTE: plugins configuration has been ommitted since Karma loads karma-*
+//  plugins by default
 module.exports = function(config) {
   config.set({
     frameworks: ['jasmine'],
-    plugins: [
-      'karma-webpack',
-      'karma-coffee-preprocessor',
-      'karma-jasmine',
-      'karma-phantomjs-launcher',
-      'karma-clear-screen-reporter',
-      'karma-notify-reporter'
-    ],
     files: [
       { pattern: 'node_modules/jquery/dist/jquery.js', watched: false },
       { pattern: 'node_modules/jasmine-jquery/lib/jasmine-jquery.js', watched: false },
@@ -31,7 +25,7 @@ module.exports = function(config) {
       'test/*Test.js': ['webpack'],
       '**/*.coffee': ['coffee']
     },
-    reporters: ['progress', 'clear-screen', 'notify'],
+    reporters: ['nyan', 'notify'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_WARN,

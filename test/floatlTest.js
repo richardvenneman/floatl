@@ -75,4 +75,32 @@ describe('getElement', () => {
       expect(element).toHaveClass(multilineClass);
     });
   });
+
+  describe('Focused state', () => {
+    beforeEach(function() {
+      this.element = document.getElementById('js-floatl');
+      this.input = document.getElementById('js-input');
+      this.$input = $(this.input);
+
+      new Floatl(this.element);
+    });
+
+    it(`adds %{focusedClass} class on focus`, function() {
+      expect(this.element).not.toHaveClass(focusedClass);
+
+      this.$input.focus();
+
+      expect(this.element).toHaveClass(focusedClass);
+    });
+
+    it(`removes %{focusedClass} class on blur`, function() {
+      this.$input.focus();
+
+      expect(this.element).toHaveClass(focusedClass);
+
+      this.$input.blur();
+
+      expect(this.element).not.toHaveClass(focusedClass);
+    });
+  });
 });

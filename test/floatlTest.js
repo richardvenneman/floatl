@@ -93,4 +93,29 @@ describe('getElement', () => {
       expect(this.element).not.toHaveClass(focusedClass);
     });
   });
+
+  describe('Acive state', () => {
+    beforeEach(function() {
+      this.element = document.getElementById('js-floatl');
+      this.input = document.getElementById('js-input');
+      this.$input = $(this.input);
+
+      new Floatl(this.element);
+    });
+
+    it(`adds %{activeClass} class when entering characters`, function() {
+      expect(this.element).not.toHaveClass(activeClass);
+
+      this.$input.focus().val('test').blur();
+
+      expect(this.element).toHaveClass(activeClass);
+    });
+
+    it(`removes %{activeClass} when all characters have been removed`, function() {
+      this.$input.val('test').blur();
+      this.$input.val('').blur();
+
+      expect(this.element).not.toHaveClass(activeClass);
+    });
+  });
 });

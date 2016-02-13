@@ -47,16 +47,6 @@ describe('getElement', () => {
       expect(element).toHaveClass(activeClass);
     });
 
-    it(`adds %{activeClass} class if input has a value`, function() {
-      let element = document.getElementById('js-floatl');
-      let input = document.getElementById('js-input');
-      input.value = 'Initial value';
-
-      new Floatl(element);
-
-      expect(element).toHaveClass(activeClass);
-    });
-
     it(`does not add %{multilineClass} class if applied to an input`, function() {
       let element = document.getElementById('js-floatl');
 

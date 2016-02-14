@@ -1,7 +1,7 @@
 module.exports = {
   output: {
     library: 'floatl',
-    libraryTarget: 'umd',
+    libraryTarget: 'var',
     filename: 'floatl.js'
   },
   devtool: '#inline-source-map',

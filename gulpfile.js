@@ -16,7 +16,7 @@ var autoprefixer = require('gulp-autoprefixer');
 // Tasks
 
 gulp.task('js', function() {
-  return gulp.src('lib/js/floatl.js')
+  return gulp.src('lib/js/index.js')
     .pipe(webpack(require('./webpack.config.js')))
     .pipe(gulp.dest('./dist/js'))
     .pipe(sourcemaps.init({ loadMaps: true }))

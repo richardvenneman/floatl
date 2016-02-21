@@ -1,6 +1,6 @@
 module.exports = {
   output: {
-    library: 'floatl',
+    library: 'Floatl',
     libraryTarget: 'var',
     filename: 'floatl.js'
   },

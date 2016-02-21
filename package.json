@@ -3,6 +3,7 @@
   "version": "0.2.4",
   "description": "A library agnostic, pragmatic implementation of the Float Label Pattern",
   "main": "dist/js/floatl.js",
+  "files": "dist",
   "dependencies": {
     "gulp": "^3.9.0"
   },

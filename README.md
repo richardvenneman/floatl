@@ -13,12 +13,12 @@ Online example: https://richardvenneman.github.io/floatl/example
 
 ## Features
 
-- CommonJS compatible
-- Library agnostic (no jQuery dependency)
-- Small (just over 2 KB minified)
-- Supports textfields and textareas
-- Customizable plain CSS styling
+- Library agnostic (compatible with but not depending on jQuery)
 - Browser support all the way down to IE8
+- Supports textfields and textareas
+- Small (less than 2 KB minified)
+- Customizable Plain CSS styling
+- Compatible with CommonJS
 
 ## Installation
 
@@ -38,7 +38,7 @@ bower install floatl --save
 
 First make sure the script is loaded. If you use a module bundler such as Browserify or Webpack, you can simply require the `floatl` package, otherwise include the script on your webpage.
 
-Markup your `label` and `input` or `textarea` with the floatl classes and wrap them in an element with the `floatl` class:
+Markup your `label` and `input` (or `textarea`) with the floatl classes and wrap them in an element with the `floatl` class:
 
 ```html
 <div class="floatl">
@@ -50,7 +50,7 @@ Markup your `label` and `input` or `textarea` with the floatl classes and wrap t
 Instantiate Floatl by passing in a DOM element:
 
 ```javascript
-var element = document.querySelectorAll('js-floatl')[0];
+var element = document.getElementById('my-floatl-element');
 
 // Module approach
 var floatl = require('float');
@@ -59,7 +59,7 @@ new floatl(element);
 // Regular approach with the global Floatl function
 new Floatl(element);
 
-// When using jQuery, you can pass in the jQuery object
+// When using jQuery, you can pass in a jQuery object
 new Floatl($('.js-floatl'))
 ```
 
@@ -72,10 +72,16 @@ You can use Floatl in your Rails project with [rails-assets](https://rails-asset
 #= require floatl/dist/js/floatl.js
 ```
 
-```sass
-// application.css.scss
-//= require floatl/dist/css/floatl.scss
+### Usage with Ember.js
+
+Install Floatl via Bower in your Ember.js project and add the files to `ember-cli-build.js` to use the global `Floatl` function:
+
+```js
+app.import('bower_components/floatl/dist/css/floatl.css');
+app.import('bower_components/floatl/dist/js/floatl.js');
 ```
+
+Official Ember CLI addon coming soon.
 
 ### CSS styling
 
@@ -90,11 +96,6 @@ While the JavaScript supports IE8+, Floatl aims to be good at Floating Labels an
 ## Motivations
 
 There are several libraries available that implement the Float Label Pattern, most notably [floatlabels.js](https://github.com/clubdesign/floatlabels.js) and [FloatLabel.js](https://github.com/m10l/FloatLabel.js). However, these libraries did not quite fulfill the requisites I had in mind (see features above) and I did not find any Bower compatible libraries when I started this project. Furthermore I like to use a well-maintained library. Since we're using this library in production at [Cityspotters](https://www.cityspotters.com) I'm keeping this library up to date.
-
-## TODO
-
-- Support auto binding of elements with `js-floatl` className
-- Refactor CoffeeScript source file to ES6
 
 ## Contributing
 
@@ -114,7 +115,7 @@ This project uses [Jasmine](http://jasmine.github.io) with the [Karma Test Runne
 
 - Install dependencies with `npm install`
 - Run Karma: `./node_modules/karma/bin/karma start`*
-- Add tests in `test/floatlTest.coffee` and implementation in `lib/coffee/floatl.coffee`
+- Add tests in `test/floatlTest.js` and implementation in `lib/js/floatl.js`
 
 As mentioned in the [Karma installation instructions](http://karma-runner.github.io/0.13/intro/installation.html) you can also install `karma-cli` globally with `npm install -g karma-cli`. After installation you can run Karma simply by typing `karma`.
 

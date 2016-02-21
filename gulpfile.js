@@ -1,37 +1,29 @@
 // Gulp dependencies
 var gulp = require('gulp');
 var gutil = require('gulp-util');
+
+// Build dependencies
+var webpack = require('webpack-stream');
 var rename = require('gulp-rename');
+var uglify = require('gulp-uglify');
+var sourcemaps = require('gulp-sourcemaps');
 
 // Style dependencies
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 
-// Build dependencies
-var buffer = require('gulp-buffer');
-var source = require('vinyl-source-stream');
-var browserify = require('browserify');
-var coffeeify = require('coffeeify');
-var uglify = require('gulp-uglify');
-
 
 // Tasks
 
 gulp.task('js', function() {
-  var b = browserify({
-    debug: false,
-    entries: ['./lib/coffee/floatl.coffee'],
-    standalone: 'Floatl',
-    transform: [coffeeify]
-  });
-
-  return b.bundle()
-    .pipe(source('floatl.js'))
-    .pipe(buffer())
+  return gulp.src('lib/js/index.js')
+    .pipe(webpack(require('./webpack.config.js')))
     .pipe(gulp.dest('./dist/js'))
+    .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(uglify())
-    .pipe(rename({ extname: '.min.js' }))
-    .pipe(gulp.dest('./dist/js'))
+    .pipe(rename('floatl.min.js'))
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest('dist/js'))
     .on('error', gutil.log);
 });
 
@@ -50,6 +42,6 @@ gulp.task('build', ['js', 'css']);
 gulp.task('default', ['build']);
 
 gulp.task('watch', function() {
-  gulp.watch(['lib/coffee/floatl.coffee'], ['js']);
+  gulp.watch(['lib/js/floatl.js'], ['js']);
   gulp.watch(['lib/scss/floatl.scss'], ['css']);
 });

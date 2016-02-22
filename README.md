@@ -2,10 +2,11 @@
 
 A library agnostic, pragmatic implementation of the [Float Label Pattern](http://mds.is/float-label-pattern/).
 
-[![NPM](https://img.shields.io/npm/v/floatl.svg?style=flat-square)](https://www.npmjs.com/package/floatl)
-[![Bower](https://img.shields.io/bower/v/floatl.svg?style=flat-square)](http://bower.io/search/?q=floatl)
-[![Build Status](https://img.shields.io/travis/richardvenneman/floatl/master.svg?style=flat-square)](https://travis-ci.org/richardvenneman/floatl)
-[![Gemnasium](https://img.shields.io/gemnasium/richardvenneman/floatl.svg?style=flat-square)](https://gemnasium.com/richardvenneman/floatl)
+[![NPM](https://img.shields.io/npm/v/floatl.svg)](https://www.npmjs.com/package/floatl)
+[![Bower](https://img.shields.io/bower/v/floatl.svg)](http://bower.io/search/?q=floatl)
+[![Build Status](https://img.shields.io/travis/richardvenneman/floatl/master.svg)](https://travis-ci.org/richardvenneman/floatl)
+[![Gemnasium](https://img.shields.io/gemnasium/richardvenneman/floatl.svg)](https://gemnasium.com/richardvenneman/floatl)
+[![Code Climate](https://codeclimate.com/github/richardvenneman/floatl/badges/gpa.svg)](https://codeclimate.com/github/richardvenneman/floatl)
 
 ![Floatl](https://i.imgur.com/fjDfAcE.gif)
 

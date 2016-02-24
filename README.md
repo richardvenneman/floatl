@@ -5,7 +5,7 @@ A library agnostic, pragmatic implementation of the [Float Label Pattern](http:/
 [![NPM](https://img.shields.io/npm/v/floatl.svg)](https://www.npmjs.com/package/floatl)
 [![Bower](https://img.shields.io/bower/v/floatl.svg)](http://bower.io/search/?q=floatl)
 [![Build Status](https://img.shields.io/travis/richardvenneman/floatl/master.svg)](https://travis-ci.org/richardvenneman/floatl)
-[![Gemnasium](https://img.shields.io/gemnasium/richardvenneman/floatl.svg)](https://gemnasium.com/richardvenneman/floatl)
+[![bitHound Overall Score](https://www.bithound.io/github/richardvenneman/floatl/badges/score.svg)](https://www.bithound.io/github/richardvenneman/floatl)
 [![Code Climate](https://codeclimate.com/github/richardvenneman/floatl/badges/gpa.svg)](https://codeclimate.com/github/richardvenneman/floatl)
 
 ![Floatl](https://i.imgur.com/fjDfAcE.gif)

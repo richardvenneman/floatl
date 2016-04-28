@@ -44,7 +44,7 @@ Markup your `label` and `input` (or `textarea`) with the floatl classes and wrap
 ```html
 <div class="floatl">
   <label class="floatl__label">First name</label>
-  <input class="floatl__input" placeholder="First name" type="text"></div>
+  <input class="floatl__input" placeholder="First name" type="text" />
 </div>
 ```
 

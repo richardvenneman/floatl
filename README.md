@@ -70,7 +70,7 @@ You can use Floatl in your Rails project with [rails-assets](https://rails-asset
 
 ```coffee
 # application.js.coffee
-#= require floatl/dist/js/floatl.js
+#= require floatl/floatl.js
 ```
 
 ### Usage with Ember.js

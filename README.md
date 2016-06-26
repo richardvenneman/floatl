@@ -91,16 +91,17 @@ After including the float.js and floatl.css, you can define and use the directiv
 ```js
 .directive('ngFloatl', function () {
   return {
-    link: function (scope, elem, attrs, ctrl) {
-      var label = elem.querySelector('label');
-      var input = elem.querySelector('input');
-    
+    link: function (scope, elem, attrs, ctrl)  {
+      var wrapper = elem[0];
+      var label = wrapper.querySelector('label');
+      var input = wrapper.querySelector('input');
+
       angular.element(elem).addClass('floatl');
       angular.element(label).addClass('floatl__label');
       angular.element(input).addClass('floatl__input');
-      
-      new Floatl(elem);
-    };
+
+      new Floatl(wrapper);
+    }
   }
 })
 ```

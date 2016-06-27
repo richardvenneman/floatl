@@ -84,6 +84,37 @@ app.import('bower_components/floatl/dist/js/floatl.js');
 
 Official Ember CLI addon coming soon.
 
+### Usage with AngularJS
+
+After including the float.js and floatl.css, you can define and use the directive below:
+
+```js
+.directive('ngFloatl', function () {
+  return {
+    link: function (scope, elem, attrs, ctrl)  {
+      var wrapper = elem[0];
+      var label = wrapper.querySelector('label');
+      var input = wrapper.querySelector('input');
+
+      angular.element(elem).addClass('floatl');
+      angular.element(label).addClass('floatl__label');
+      angular.element(input).addClass('floatl__input');
+
+      new Floatl(wrapper);
+    }
+  }
+})
+```
+
+
+```html
+<div ng-floatl>
+  <label>First name</label>
+  <input placeholder="First name" type="text" />
+</div>
+```
+
+
 ### CSS styling
 
 All styling (including transitions) is basically done by toggling CSS classes. Because of this it is easy to apply your own styling. Take a look at the [default styling](https://github.com/richardvenneman/floatl/blob/master/dist/css/floatl.css) to get an idea of where to override attributes. Or check out this [Gist with example styling](https://gist.github.com/richardvenneman/cf64188aa645208c65c8) – we currently apply this on our site.

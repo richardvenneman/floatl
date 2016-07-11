@@ -36,7 +36,9 @@
     "webpack": "^1.12.13",
     "webpack-stream": "^3.1.0"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "karma start --single-run"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/richardvenneman/floatl"

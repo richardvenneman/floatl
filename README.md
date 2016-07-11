@@ -23,9 +23,8 @@ Online example: https://richardvenneman.github.io/floatl/example
 
 ## Installation
 
-Download the [built versions of the JavaScript and CSS files](https://github.com/richardvenneman/floatl/tree/master/dist) and include them in your app.
-
-You can also install Floatl via [NPM](https://www.npmjs.com/package/floatl) or [Bower](http://bower.io/search/?q=floatl):
+Floatl is built primarily for module bundlers such as [Browserify](http://browserify.org) and [webpack](http://webpack.github.io). Using it in a classic browser environment? Skip to [using the global Floatl](#using-the-global-floatl-classic-browser-environment).
+As such it is distributed via [NPM](https://www.npmjs.com/package/floatl) and [Bower](http://bower.io/search/?q=floatl).
 
 ```bash
 npm install floatl --save
@@ -35,9 +34,16 @@ npm install floatl --save
 bower install floatl --save
 ```
 
+## Using the global Floatl (classic browser environment)
+
+1. Clone this repository
+2. Install the required dependencies `npm install`
+3. Run `webpack --config webpack.web.config.js`
+4. Copy `lib/js/floatl.js` and include it in your app
+
 ## Usage
 
-First make sure the script is loaded. If you use a module bundler such as Browserify or Webpack, you can simply require the `floatl` package, otherwise include the script on your webpage.
+First make sure the script is loaded. If you use a module bundler, you can simply require the `floatl` package, otherwise include the script on your webpage.
 
 Markup your `label` and `input` (or `textarea`) with the floatl classes and wrap them in an element with the `floatl` class:
 
@@ -57,7 +63,7 @@ var element = document.getElementById('my-floatl-element');
 var floatl = require('float');
 new floatl(element);
 
-// Regular approach with the global Floatl function
+// When using the global Floatl
 new Floatl(element);
 
 // When using jQuery, you can pass in a jQuery object

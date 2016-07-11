@@ -42,7 +42,8 @@
   "scripts": {
     "test": "karma start --single-run",
     "build:js": "webpack",
-    "build:css": "node-sass --output-style expanded lib/scss/floatl.scss | postcss -u autoprefixer --autoprefixer.browsers '> 3%, ie >= 8' > dist/css/floatl.css"
+    "build:css": "node-sass --output-style expanded lib/scss/floatl.scss | postcss -u autoprefixer --autoprefixer.browsers '> 3%, ie >= 8' > dist/css/floatl.css",
+    "build": "npm run build:js && npm run build:css"
   },
   "repository": {
     "type": "git",

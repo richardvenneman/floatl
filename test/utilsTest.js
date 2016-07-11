@@ -1,5 +1,5 @@
-import { getElement, addClass, removeClass } from '../lib/js/utils.js';
-import { addEventListener } from '../lib/js/utils.js';
+import { getElement, addClass, removeClass } from '../src/js/utils.js';
+import { addEventListener } from '../src/js/utils.js';
 
 describe('getElement', () => {
   beforeEach(function() {

@@ -2,7 +2,7 @@
   "name": "floatl",
   "version": "0.3.0",
   "description": "A library agnostic, pragmatic implementation of the Float Label Pattern",
-  "main": "dist/js/floatl.js",
+  "main": "lib/js/floatl.js",
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^6.3.7",
@@ -36,10 +36,10 @@
     "test": "karma start --single-run",
     "tdd": "karma start",
     "build:js": "webpack",
-    "build:css": "node-sass --output-style expanded lib/scss/floatl.scss | postcss -u autoprefixer --autoprefixer.browsers '> 3%, ie >= 8' > dist/css/floatl.css",
+    "build:css": "node-sass --output-style expanded src/scss/floatl.scss lib/css/floatl.css && postcss -u autoprefixer -b '> 3%, ie >= 8' lib/css/floatl.css -d lib/css",
     "build": "npm run build:js && npm run build:css",
-    "watch:js": "onchange 'lib/js/*.js' -- npm run build:js",
-    "watch:css": "onchange 'lib/scss/*.scss' -- npm run build:css"
+    "watch:js": "onchange 'src/js/*.js' -- npm run build:js",
+    "watch:css": "onchange 'src/scss/*.scss' -- npm run build:css"
   },
   "repository": {
     "type": "git",

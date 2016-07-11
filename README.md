@@ -88,7 +88,7 @@ Official Ember CLI addon coming soon.
 
 After including the float.js and floatl.css, you can define and use the directive below:
 
-```js
+```javascript
 .directive('ngFloatl', function () {
   return {
     link: function (scope, elem, attrs, ctrl)  {
@@ -106,14 +106,12 @@ After including the float.js and floatl.css, you can define and use the directiv
 })
 ```
 
-
 ```html
 <div ng-floatl>
   <label>First name</label>
   <input placeholder="First name" type="text" />
 </div>
 ```
-
 
 ### CSS styling
 
@@ -146,10 +144,8 @@ First install the dependencies with `npm install`. This project uses some [Gulp]
 This project uses [Jasmine](http://jasmine.github.io) with the [Karma Test Runner](http://karma-runner.github.io/).
 
 - Install dependencies with `npm install`
-- Run Karma: `./node_modules/karma/bin/karma start`*
+- Run the test suite with: `npm test` (or `npm run tdd` for Test Driven Development)
 - Add tests in `test/floatlTest.js` and implementation in `lib/js/floatl.js`
-
-As mentioned in the [Karma installation instructions](http://karma-runner.github.io/0.13/intro/installation.html) you can also install `karma-cli` globally with `npm install -g karma-cli`. After installation you can run Karma simply by typing `karma`.
 
 ## License
 

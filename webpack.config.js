@@ -1,20 +1,27 @@
 module.exports = {
-  output: {
-    library: 'Floatl',
-    libraryTarget: 'var',
-    filename: 'floatl.js'
+  entry: {
+    index: './lib/js/index.js'
   },
+
   devtool: '#inline-source-map',
+
+  output: {
+    path: './dist/js',
+    filename: 'floatl.js',
+    library: 'Floatl',
+    libraryTarget: 'var'
+  },
+
+  resolve: {
+    moduleDirectories: ['lib/js']
+  },
+
   module: {
     loaders: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel',
-        query: {
-          cacheDirectory: true,
-          presets: ['es2015']
-        }
+        loader: 'babel'
       }
     ]
   }

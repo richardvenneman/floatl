@@ -35,7 +35,7 @@
   "scripts": {
     "test": "karma start --single-run",
     "tdd": "karma start",
-    "build:js": "webpack",
+    "build:js": "webpack && webpack --config webpack.global.config.js",
     "build:css": "node-sass --output-style expanded src/scss/floatl.scss lib/css/floatl.css && postcss -u autoprefixer -b '> 3%, ie >= 8' lib/css/floatl.css -d lib/css",
     "build": "npm run build:js && npm run build:css",
     "watch:js": "onchange 'src/js/*.js' -- npm run build:js",

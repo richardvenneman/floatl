@@ -23,7 +23,7 @@ Online example: https://richardvenneman.github.io/floatl/example
 
 ## Installation
 
-Floatl is built primarily for module bundlers such as [Browserify](http://browserify.org) and [webpack](http://webpack.github.io). Using it in a classic browser environment? Skip to [using the global Floatl](#using-the-global-floatl-classic-browser-environment).
+Floatl is built primarily for module bundlers such as [Browserify](http://browserify.org) and [webpack](http://webpack.github.io).
 As such it is distributed via [NPM](https://www.npmjs.com/package/floatl) and [Bower](http://bower.io/search/?q=floatl).
 
 ```bash
@@ -34,12 +34,10 @@ npm install floatl --save
 bower install floatl --save
 ```
 
-## Using the global Floatl (classic browser environment)
+### Using the global Floatl (classic browser environment)
 
-1. Clone this repository
-2. Install the required dependencies `npm install`
-3. Run `webpack --config webpack.web.config.js`
-4. Copy `lib/js/floatl.js` and include it in your app
+If you're not using a module bundler, you can download and include the globally built [lib/js/floatl.global.js](https://github.com/richardvenneman/floatl/tree/master/lib/js) in your app.
+This version adds Floatl to the global namespace.
 
 ## Usage
 
@@ -72,11 +70,11 @@ new Floatl($('.js-floatl'))
 
 ### Usage with Ruby on Rails
 
-You can use Floatl in your Rails project with [rails-assets](https://rails-assets.org). When using rails-assets, include the built (non-module) version which is also distributed via Bower:
+You can use Floatl in your Rails project with [rails-assets](https://rails-assets.org). When using rails-assets, include the global Floatl version which is also distributed via Bower:
 
 ```coffee
 # application.js.coffee
-#= require floatl/floatl.js
+#= require floatl/floatl.global.js
 ```
 
 ### Usage with Ember.js
@@ -85,7 +83,7 @@ Install Floatl via Bower in your Ember.js project and add the files to `ember-cl
 
 ```js
 app.import('bower_components/floatl/dist/css/floatl.css');
-app.import('bower_components/floatl/dist/js/floatl.js');
+app.import('bower_components/floatl/dist/js/floatl.global.js');
 ```
 
 Official Ember CLI addon coming soon.

@@ -86,8 +86,6 @@ app.import('bower_components/floatl/dist/css/floatl.css');
 app.import('bower_components/floatl/dist/js/floatl.global.js');
 ```
 
-Official Ember CLI addon coming soon.
-
 ### Usage with AngularJS
 
 After including the float.js and floatl.css, you can define and use the directive below:
@@ -117,9 +115,44 @@ After including the float.js and floatl.css, you can define and use the directiv
 </div>
 ```
 
+### Usage with React
+
+Add Floatl to your project:
+
+1. `npm install --save floatl`
+2. Copy the [default styling](https://github.com/richardvenneman/floatl/blob/master/lib/css/floatl.css) or add your own
+
+In your component:
+
+```javascript
+import React, { Component } from 'react';
+import Floatl from 'floatl';
+
+class MyComponent extends Component {
+  componentDidMount () {
+    const floatls = ReactDOM.findDOMNode(this).querySelectorAll('.floatl');
+    
+    for (let i = 0; i < floatls.length; i++) {
+      new Floatl(floatls[i]);
+    }
+  }
+  
+  render () {
+    return (
+      <div className='floatl'>
+        <label for='name' className='floatl__label'>Name</label>
+        <input type='text' name='name' className='floatl__input' placeholder='Name' />
+      </div>
+    );
+  }
+}
+
+export default MyComponent;
+```
+
 ### CSS styling
 
-All styling (including transitions) is basically done by toggling CSS classes. Because of this it is easy to apply your own styling. Take a look at the [default styling](https://github.com/richardvenneman/floatl/blob/master/dist/css/floatl.css) to get an idea of where to override attributes. Or check out this [Gist with example styling](https://gist.github.com/richardvenneman/cf64188aa645208c65c8) – we currently apply this on our site.
+All styling (including transitions) is basically done by toggling CSS classes. Because of this it is easy to apply your own styling. Take a look at the [default styling](https://github.com/richardvenneman/floatl/blob/master/lib/css/floatl.css) to get an idea of where to override attributes. Or check out this [Gist with example styling](https://gist.github.com/richardvenneman/cf64188aa645208c65c8) – we currently apply this on our site.
 
 ## Browser support
 

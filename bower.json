@@ -6,10 +6,8 @@
   ],
   "description": "A library agnostic, pragmatic implementation of the Float Label Pattern",
   "main": [
-    "lib/coffee/floatl.coffee",
-    "lib/scss/floatl.scss",
-    "dist/js/floatl.js",
-    "dist/css/floatl.css"
+    "lib/js/floatl.global.js",
+    "lib/css/floatl.css"
   ],
   "moduleType": [
     "node",

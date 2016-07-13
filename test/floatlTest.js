@@ -1,4 +1,4 @@
-import Floatl from '../lib/js/floatl.js';
+import Floatl from '../src/js/floatl.js';
 
 const focusedClass = 'floatl--focused';
 const activeClass = 'floatl--active';

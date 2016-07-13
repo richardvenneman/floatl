@@ -23,9 +23,8 @@ Online example: https://richardvenneman.github.io/floatl/example
 
 ## Installation
 
-Download the [built versions of the JavaScript and CSS files](https://github.com/richardvenneman/floatl/tree/master/dist) and include them in your app.
-
-You can also install Floatl via [NPM](https://www.npmjs.com/package/floatl) or [Bower](http://bower.io/search/?q=floatl):
+Floatl is built primarily for module bundlers such as [Browserify](http://browserify.org) and [webpack](http://webpack.github.io).
+As such it is distributed via [NPM](https://www.npmjs.com/package/floatl) and [Bower](http://bower.io/search/?q=floatl).
 
 ```bash
 npm install floatl --save
@@ -35,9 +34,14 @@ npm install floatl --save
 bower install floatl --save
 ```
 
+### Using the global Floatl (classic browser environment)
+
+If you're not using a module bundler, you can download and include the globally built [lib/js/floatl.global.js](https://github.com/richardvenneman/floatl/tree/master/lib/js) in your app.
+This version adds Floatl to the global namespace.
+
 ## Usage
 
-First make sure the script is loaded. If you use a module bundler such as Browserify or Webpack, you can simply require the `floatl` package, otherwise include the script on your webpage.
+First make sure the script is loaded. If you use a module bundler, you can simply require the `floatl` package, otherwise include the script on your webpage.
 
 Markup your `label` and `input` (or `textarea`) with the floatl classes and wrap them in an element with the `floatl` class:
 
@@ -57,7 +61,7 @@ var element = document.getElementById('my-floatl-element');
 var floatl = require('float');
 new floatl(element);
 
-// Regular approach with the global Floatl function
+// When using the global Floatl
 new Floatl(element);
 
 // When using jQuery, you can pass in a jQuery object
@@ -66,11 +70,11 @@ new Floatl($('.js-floatl'))
 
 ### Usage with Ruby on Rails
 
-You can use Floatl in your Rails project with [rails-assets](https://rails-assets.org). When using rails-assets, include the built (non-module) version which is also distributed via Bower:
+You can use Floatl in your Rails project with [rails-assets](https://rails-assets.org). When using rails-assets, include the global Floatl version which is also distributed via Bower:
 
 ```coffee
 # application.js.coffee
-#= require floatl/floatl.js
+#= require floatl/floatl.global.js
 ```
 
 ### Usage with Ember.js
@@ -79,10 +83,8 @@ Install Floatl via Bower in your Ember.js project and add the files to `ember-cl
 
 ```js
 app.import('bower_components/floatl/dist/css/floatl.css');
-app.import('bower_components/floatl/dist/js/floatl.js');
+app.import('bower_components/floatl/dist/js/floatl.global.js');
 ```
-
-Official Ember CLI addon coming soon.
 
 ### Usage with AngularJS
 
@@ -113,9 +115,44 @@ After including the float.js and floatl.css, you can define and use the directiv
 </div>
 ```
 
+### Usage with React
+
+Add Floatl to your project:
+
+1. `npm install --save floatl`
+2. Copy the [default styling](https://github.com/richardvenneman/floatl/blob/master/lib/css/floatl.css) or add your own
+
+In your component:
+
+```javascript
+import React, { Component } from 'react';
+import Floatl from 'floatl';
+
+class MyComponent extends Component {
+  componentDidMount () {
+    const floatls = ReactDOM.findDOMNode(this).querySelectorAll('.floatl');
+    
+    for (let i = 0; i < floatls.length; i++) {
+      new Floatl(floatls[i]);
+    }
+  }
+  
+  render () {
+    return (
+      <div className='floatl'>
+        <label for='name' className='floatl__label'>Name</label>
+        <input type='text' name='name' className='floatl__input' placeholder='Name' />
+      </div>
+    );
+  }
+}
+
+export default MyComponent;
+```
+
 ### CSS styling
 
-All styling (including transitions) is basically done by toggling CSS classes. Because of this it is easy to apply your own styling. Take a look at the [default styling](https://github.com/richardvenneman/floatl/blob/master/dist/css/floatl.css) to get an idea of where to override attributes. Or check out this [Gist with example styling](https://gist.github.com/richardvenneman/cf64188aa645208c65c8) – we currently apply this on our site.
+All styling (including transitions) is basically done by toggling CSS classes. Because of this it is easy to apply your own styling. Take a look at the [default styling](https://github.com/richardvenneman/floatl/blob/master/lib/css/floatl.css) to get an idea of where to override attributes. Or check out this [Gist with example styling](https://gist.github.com/richardvenneman/cf64188aa645208c65c8) – we currently apply this on our site.
 
 ## Browser support
 

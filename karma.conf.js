@@ -1,11 +1,11 @@
 var webpackConfig = require('./webpack.config');
 
 webpackConfig.output = {
-  entry: './lib/js/floatl.js',
+  entry: './src/js/floatl.js',
   output: {
     library: 'floatl',
     libraryTarget: 'umd',
-    filename: 'dist/js/floatl.js'
+    filename: 'lib/js/floatl.js'
   }
 };
 

@@ -1,19 +1,19 @@
 module.exports = {
   entry: {
-    index: './lib/js/index.js'
+    index: './src/js/index.js'
   },
 
   devtool: '#inline-source-map',
 
   output: {
-    path: './dist/js',
+    path: './lib/js',
     filename: 'floatl.js',
     library: 'Floatl',
-    libraryTarget: 'var'
+    libraryTarget: 'commonjs2'
   },
 
   resolve: {
-    moduleDirectories: ['lib/js']
+    moduleDirectories: ['src/js']
   },
 
   module: {

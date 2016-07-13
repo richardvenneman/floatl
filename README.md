@@ -47,8 +47,8 @@ Markup your `label` and `input` (or `textarea`) with the floatl classes and wrap
 
 ```html
 <div class="floatl">
-  <label class="floatl__label">First name</label>
-  <input class="floatl__input" placeholder="First name" type="text" />
+  <label for="first_name" class="floatl__label">First name</label>
+  <input name="first_name" class="floatl__input" placeholder="First name" type="text" />
 </div>
 ```
 
@@ -115,8 +115,8 @@ After including the float.js and floatl.css, you can define and use the directiv
 
 ```html
 <div ng-floatl>
-  <label>First name</label>
-  <input placeholder="First name" type="text" />
+  <label for="first_name">First name</label>
+  <input name="first_name" type="text" placeholder="First name" />
 </div>
 ```
 
@@ -145,8 +145,8 @@ class MyComponent extends Component {
   render () {
     return (
       <div className='floatl'>
-        <label for='name' className='floatl__label'>Name</label>
-        <input type='text' name='name' className='floatl__input' placeholder='Name' />
+        <label for='first_name' className='floatl__label'>First name</label>
+        <input name='first_name' type='text' className='floatl__input' placeholder='First name' />
       </div>
     );
   }

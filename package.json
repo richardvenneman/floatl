@@ -1,6 +1,6 @@
 {
   "name": "floatl",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "A library agnostic, pragmatic implementation of the Float Label Pattern",
   "main": "lib/js/floatl.js",
   "dependencies": {},

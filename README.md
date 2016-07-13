@@ -77,13 +77,18 @@ You can use Floatl in your Rails project with [rails-assets](https://rails-asset
 #= require floatl/floatl.global.js
 ```
 
+```scss
+// application.scss
+//= require floatl/floatl.css
+```
+
 ### Usage with Ember.js
 
 Install Floatl via Bower in your Ember.js project and add the files to `ember-cli-build.js` to use the global `Floatl` function:
 
 ```js
-app.import('bower_components/floatl/dist/css/floatl.css');
-app.import('bower_components/floatl/dist/js/floatl.global.js');
+app.import('bower_components/floatl/lib/css/floatl.css');
+app.import('bower_components/floatl/lib/js/floatl.global.js');
 ```
 
 ### Usage with AngularJS

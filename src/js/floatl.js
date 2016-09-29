@@ -9,9 +9,10 @@ export default class Floatl {
     this.element = getElement(element);
     this.label = this.element.querySelectorAll('.floatl__label')[0];
     this.input = this.element.querySelectorAll('.floatl__input')[0];
-
-    this._bindListeners();
-    this._init();
+    if (this.label && this.input) {
+        this._bindListeners();
+        this._init();
+    }
   }
 
   _bindListeners() {

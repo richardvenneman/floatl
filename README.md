@@ -70,11 +70,11 @@ new Floatl($('.js-floatl'))
 
 ### Usage with Ruby on Rails
 
-You can use Floatl in your Rails project with [rails-assets](https://rails-assets.org). When using rails-assets, include the global Floatl version which is also distributed via Bower:
+You can use Floatl in your Rails project with [rails-assets](https://rails-assets.org):
 
 ```coffee
 # application.js.coffee
-#= require floatl/floatl.global.js
+#= require floatl
 ```
 
 ```scss

@@ -24,7 +24,7 @@
     "karma-nyan-reporter": "^0.2.3",
     "karma-phantomjs-launcher": "^1.0.0",
     "karma-scss-preprocessor": "^2.0.0",
-    "karma-webpack": "^1.7.0",
+    "karma-webpack": "^2.0.2",
     "node-sass": "^3.11.3",
     "onchange": "^3.0.0",
     "phantomjs-prebuilt": "^2.1.3",

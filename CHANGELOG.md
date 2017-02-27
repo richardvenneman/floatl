@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file going forward.
 
+## 1.0.4 (2017-02-27)
+- Handle state change on input event (thanks @zlatevbg!)
+
 ## 1.0.3 (2016-10-19)
 - Stop initialisation if required either input or label is not found (thanks @leptest!)
 

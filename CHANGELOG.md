@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file going forward.
 
+## 1.0.5 (2017-02-27)
+- Forgot to release built files (again!)
+
 ## 1.0.4 (2017-02-27)
 - Handle state change on input event (thanks @zlatevbg!)
 

@@ -1,12 +1,9 @@
 var webpackConfig = require('./webpack.config');
 
 webpackConfig.output = {
-  entry: './src/js/floatl.js',
-  output: {
-    library: 'floatl',
-    libraryTarget: 'umd',
-    filename: 'lib/js/floatl.js'
-  }
+  library: 'floatl',
+  libraryTarget: 'umd',
+  filename: 'lib/js/floatl.js'
 };
 
 // NOTE: plugins configuration has been ommitted since Karma loads karma-*

@@ -1,27 +1,27 @@
 module.exports = {
   entry: {
-    index: './src/js/index.js'
+    index: __dirname + '/src/js/index.js'
   },
 
   devtool: '#inline-source-map',
 
   output: {
-    path: './lib/js',
+    path: __dirname + '/lib/js',
     filename: 'floatl.js',
     library: 'Floatl',
     libraryTarget: 'commonjs2'
   },
 
   resolve: {
-    moduleDirectories: ['src/js']
+    modules: ['src/js']
   },
 
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel'
+        use: 'babel-loader'
       }
     ]
   }

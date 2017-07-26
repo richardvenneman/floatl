@@ -1,46 +1,46 @@
-import { getElement, addClass, removeClass, addEventListener } from './utils';
+import { getElement, addClass, removeClass, addEventListener } from './utils'
 
-const focusedClass = 'floatl--focused';
-const activeClass = 'floatl--active';
-const multilineClass = 'floatl--multiline';
+const focusedClass = 'floatl--focused'
+const activeClass = 'floatl--active'
+const multilineClass = 'floatl--multiline'
 
 export default class Floatl {
-  constructor(element) {
-    this.element = getElement(element);
-    this.label = this.element.querySelectorAll('.floatl__label')[0];
-    this.input = this.element.querySelectorAll('.floatl__input')[0];
-    if (!this.label || !this.input) return;
-    this._bindListeners();
-    this._init();
+  constructor (element) {
+    this.element = getElement(element)
+    this.label = this.element.querySelectorAll('.floatl__label')[0]
+    this.input = this.element.querySelectorAll('.floatl__input')[0]
+    if (!this.label || !this.input) return
+    this._bindListeners()
+    this._init()
   }
 
-  _bindListeners() {
+  _bindListeners () {
     addEventListener(this.input, 'focus', () => {
-      addClass(this.element, focusedClass);
-    });
+      addClass(this.element, focusedClass)
+    })
 
     addEventListener(this.input, 'blur', () => {
-      removeClass(this.element, focusedClass);
-    });
+      removeClass(this.element, focusedClass)
+    })
 
     for (var event of ['keyup', 'blur', 'change', 'input']) {
-      addEventListener(this.input, event, () => this._handleChange());
+      addEventListener(this.input, event, () => this._handleChange())
     }
   }
 
-  _init() {
+  _init () {
     if (this.input.tagName === 'TEXTAREA') {
-      addClass(this.element, multilineClass);
+      addClass(this.element, multilineClass)
     }
 
-    this._handleChange();
+    this._handleChange()
   }
 
-  _handleChange() {
+  _handleChange () {
     if (this.input.value === '') {
-      removeClass(this.element, activeClass);
+      removeClass(this.element, activeClass)
     } else {
-      addClass(this.element, activeClass);
+      addClass(this.element, activeClass)
     }
   }
 }

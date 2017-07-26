@@ -1,3 +1,1 @@
-import Floatl from './floatl'
-
-module.exports = Floatl;
+export { default as Floatl } from './floatl'

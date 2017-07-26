@@ -1,37 +1,40 @@
-export function getElement(element) {
+export function getElement (element) {
   if (element.tagName) {
-    return element;
+    return element
   } else if (jQuery && element instanceof jQuery) {
-    return element.get(0);
+    return element.get(0)
   } else {
     throw new TypeError(`%{element} 'is not a valid element.
-                        Valid options are: DOM Element, jQuery.'`);
+                        Valid options are: DOM Element, jQuery.'`)
   }
 }
 
-export function addClass(element, className) {
+export function addClass (element, className) {
   if (element.classList) {
-    element.classList.add(className);
+    element.classList.add(className)
   } else {
-    element.className += ` %{className}`;
+    element.className += ` %{className}`
   }
 }
 
-export function removeClass(element, className) {
+export function removeClass (element, className) {
   if (element.classList) {
-    element.classList.remove(className);
+    element.classList.remove(className)
   } else {
-    const re = new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi');
-    element.className = element.className.replace(re, ' ');
+    const re = new RegExp(
+      '(^|\\b)' + className.split(' ').join('|') + '(\\b|$)',
+      'gi'
+    )
+    element.className = element.className.replace(re, ' ')
   }
 }
 
-export function addEventListener(element, eventName, handler) {
+export function addEventListener (element, eventName, handler) {
   if (element.addEventListener) {
-    element.addEventListener(eventName, handler);
+    element.addEventListener(eventName, handler)
   } else {
-    element.attachEvent(`on%{eventName}`, function() {
-      handler.call(element);
-    });
+    element.attachEvent(`on%{eventName}`, function () {
+      handler.call(element)
+    })
   }
 }

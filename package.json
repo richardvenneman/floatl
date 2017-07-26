@@ -9,12 +9,18 @@
   "devDependencies": {
     "autoprefixer": "^6.5.3",
     "babel-preset-env": "^1.6.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
     "node-sass": "^3.11.3",
     "onchange": "^3.0.0",
     "postcss-cli": "^3.0.0",
     "rollup": "^0.43.0",
     "rollup-plugin-babel": "^2.7.1",
-    "rollup-watch": "^4.0.0"
+    "rollup-watch": "^4.0.0",
+    "standard": "^10.0.2"
   },
   "scripts": {
     "build": "rollup -c",
@@ -26,7 +32,11 @@
     "type": "git",
     "url": "https://github.com/richardvenneman/floatl.git"
   },
-  "keywords": ["floatlabelpattern", "float", "label"],
+  "keywords": [
+    "floatlabelpattern",
+    "float",
+    "label"
+  ],
   "author": "Richard Venneman (richardvenneman@me.com)",
   "license": "MIT",
   "bugs": {

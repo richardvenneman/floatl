@@ -1,9 +1,9 @@
 import { addClass, addEventListener, removeClass } from "./utils";
 
 export class Floatl {
-  public static readonly focusedClass = "floatl--focused";
-  public static readonly activeClass = "floatl--active";
-  public static readonly multilineClass = "floatl--multiline";
+  public static readonly FOCUSED_CLASS = "floatl--focused";
+  public static readonly ACTIVE_CLASS = "floatl--active";
+  public static readonly MULTILINE_CLASS = "floatl--multiline";
 
   private element: HTMLElement;
   private label: Element;
@@ -20,7 +20,7 @@ export class Floatl {
     }
 
     if (this.input.nodeName === "TEXTAREA") {
-      addClass(this.element, Floatl.multilineClass);
+      addClass(this.element, Floatl.MULTILINE_CLASS);
     }
 
     this.handleChange();
@@ -29,19 +29,19 @@ export class Floatl {
 
   private handleChange() {
     if ((this.input as HTMLInputElement | HTMLTextAreaElement).value === "") {
-      removeClass(this.element, Floatl.activeClass);
+      removeClass(this.element, Floatl.ACTIVE_CLASS);
     } else {
-      addClass(this.element, Floatl.activeClass);
+      addClass(this.element, Floatl.ACTIVE_CLASS);
     }
   }
 
   private bindListeners() {
     addEventListener(this.input, "focus", () => {
-      addClass(this.element, Floatl.focusedClass);
+      addClass(this.element, Floatl.FOCUSED_CLASS);
     });
 
     addEventListener(this.input, "blur", () => {
-      removeClass(this.element, Floatl.focusedClass);
+      removeClass(this.element, Floatl.FOCUSED_CLASS);
     });
 
     for (const event of ["keyup", "blur", "change", "input"]) {

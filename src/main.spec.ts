@@ -33,31 +33,27 @@ describe("Floatl", () => {
       expect(action).not.toThrow();
     });
 
-    it(`adds ${Floatl.activeClass} class if input has a value`, () => {
+    it(`adds ${Floatl.ACTIVE_CLASS} class if input has a value`, () => {
       const element = document.getElementById("floatlOne");
       const input = document.getElementById("floatlOneInput");
       (input as HTMLInputElement).value = "Initial value";
       const floatl = new Floatl(element);
 
-      expect(element.classList.contains(`${Floatl.activeClass}`)).toBeTruthy();
+      expect(element.classList.contains(Floatl.ACTIVE_CLASS)).toBeTruthy();
     });
 
-    it(`does not add ${Floatl.multilineClass} class if not a textarea`, () => {
+    it(`does not add ${Floatl.MULTILINE_CLASS} class if not a textarea`, () => {
       const element = document.getElementById("floatlOne");
       const floatl = new Floatl(element);
 
-      expect(
-        element.classList.contains(`${Floatl.multilineClass}`)
-      ).toBeFalsy();
+      expect(element.classList.contains(Floatl.MULTILINE_CLASS)).toBeFalsy();
     });
 
-    it(`adds ${Floatl.multilineClass} class if applied to a textarea`, () => {
+    it(`adds ${Floatl.MULTILINE_CLASS} class if applied to a textarea`, () => {
       const element = document.getElementById("floatlTwo");
       const floatl = new Floatl(element);
 
-      expect(
-        element.classList.contains(`${Floatl.multilineClass}`)
-      ).toBeTruthy();
+      expect(element.classList.contains(Floatl.MULTILINE_CLASS)).toBeTruthy();
     });
   });
 
@@ -71,22 +67,22 @@ describe("Floatl", () => {
       const floatl = new Floatl(element);
     });
 
-    it(`adds ${Floatl.focusedClass} class on focus`, () => {
-      expect(element.classList.contains(Floatl.focusedClass)).toBeFalsy();
+    it(`adds ${Floatl.FOCUSED_CLASS} class on focus`, () => {
+      expect(element.classList.contains(Floatl.FOCUSED_CLASS)).toBeFalsy();
 
       input.focus();
 
-      expect(element.classList.contains(Floatl.focusedClass)).toBeTruthy();
+      expect(element.classList.contains(Floatl.FOCUSED_CLASS)).toBeTruthy();
     });
 
-    it(`removes ${Floatl.focusedClass} class on blur`, () => {
+    it(`removes ${Floatl.FOCUSED_CLASS} class on blur`, () => {
       input.focus();
 
-      expect(element.classList.contains(Floatl.focusedClass)).toBeTruthy();
+      expect(element.classList.contains(Floatl.FOCUSED_CLASS)).toBeTruthy();
 
       input.blur();
 
-      expect(element.classList.contains(Floatl.focusedClass)).toBeFalsy();
+      expect(element.classList.contains(Floatl.FOCUSED_CLASS)).toBeFalsy();
     });
   });
 
@@ -100,23 +96,23 @@ describe("Floatl", () => {
       const floatl = new Floatl(element);
     });
 
-    it(`adds ${Floatl.activeClass} class when entering characters`, () => {
-      expect(element.classList.contains(Floatl.activeClass)).toBeFalsy();
+    it(`adds ${Floatl.ACTIVE_CLASS} class when entering characters`, () => {
+      expect(element.classList.contains(Floatl.ACTIVE_CLASS)).toBeFalsy();
 
       input.focus();
       input.value = "test";
       input.blur();
 
-      expect(element.classList.contains(Floatl.activeClass)).toBeTruthy();
+      expect(element.classList.contains(Floatl.ACTIVE_CLASS)).toBeTruthy();
     });
 
-    it(`removes ${Floatl.activeClass} removing all characters`, () => {
+    it(`removes ${Floatl.ACTIVE_CLASS} removing all characters`, () => {
       input.value = "test";
       input.blur();
       input.value = "";
       input.blur();
 
-      expect(element.classList.contains(Floatl.activeClass)).toBeFalsy();
+      expect(element.classList.contains(Floatl.ACTIVE_CLASS)).toBeFalsy();
     });
   });
 });

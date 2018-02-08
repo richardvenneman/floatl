@@ -1,4 +1,4 @@
-import { addClass, removeClass } from "./utils";
+import { addClass, removeClass, addEventListener } from "./utils";
 
 describe("Utils", () => {
   let fixture;
@@ -41,6 +41,23 @@ describe("Utils", () => {
       removeClass(fixture, "test");
 
       expect(fixture.className).toEqual("");
+    });
+  });
+
+  describe("addEventListener", () => {
+    it("executes callback on attached DOM events", () => {
+      const event = document.createEvent("HTMLEvents");
+      event.initEvent("click", true, true);
+
+      const callback = () => {
+        console.log(fixture);
+        fixture.innerHTML = "callback changed value";
+      };
+
+      addEventListener(fixture, "click", callback);
+      fixture.dispatchEvent(event);
+
+      expect(fixture.innerHTML).toEqual("callback changed value");
     });
   });
 });

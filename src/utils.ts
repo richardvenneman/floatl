@@ -17,3 +17,13 @@ export function removeClass(element: HTMLElement, className: string) {
     element.className = element.className.replace(re, " ");
   }
 }
+
+export function addEventListener(element: HTMLElement, event: string, cb: any) {
+  if (element.addEventListener) {
+    element.addEventListener(event, cb);
+  } else {
+    (element as any).attachEvent(`on%{event}`, () => {
+      cb.call(element);
+    });
+  }
+}

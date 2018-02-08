@@ -1,4 +1,4 @@
-export function addClass(element: HTMLElement, className: string) {
+export function addClass(element: Element, className: string) {
   if (element.classList) {
     element.classList.add(className);
   } else {
@@ -6,7 +6,7 @@ export function addClass(element: HTMLElement, className: string) {
   }
 }
 
-export function removeClass(element: HTMLElement, className: string) {
+export function removeClass(element: Element, className: string) {
   if (element.classList) {
     element.classList.remove(className);
   } else {
@@ -18,7 +18,7 @@ export function removeClass(element: HTMLElement, className: string) {
   }
 }
 
-export function addEventListener(element: HTMLElement, event: string, cb: any) {
+export function addEventListener(element: Element, event: string, cb: any) {
   if (element.addEventListener) {
     element.addEventListener(event, cb);
   } else {

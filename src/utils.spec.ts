@@ -50,7 +50,6 @@ describe("Utils", () => {
       event.initEvent("click", true, true);
 
       const callback = () => {
-        console.log(fixture);
         fixture.innerHTML = "callback changed value";
       };
 

@@ -1,4 +1,4 @@
-process.env.CHROME_BIN = require('puppeteer').executablePath()
+process.env.CHROME_BIN = require("puppeteer").executablePath();
 
 module.exports = function(config) {
   config.set({
@@ -7,7 +7,7 @@ module.exports = function(config) {
     preprocessors: {
       "**/*.ts": "karma-typescript"
     },
-    reporters: ["progress", "karma-typescript"],
+    reporters: ["progress", "karma-typescript", "notify"],
     browsers: ["ChromeHeadless"]
   });
 };

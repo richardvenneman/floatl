@@ -105,6 +105,10 @@ module.exports = function(config) {
       type: "lcov",
       subdir: ".",
       file: "lcov.info"
+    },
+
+    sauceLabs: {
+      recordScreenshots: true
     }
   });
 };

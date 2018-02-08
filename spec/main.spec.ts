@@ -1,4 +1,4 @@
-import { Floatl } from "./main";
+import { Floatl } from "../src/main";
 
 describe("Floatl", () => {
   let fixture;

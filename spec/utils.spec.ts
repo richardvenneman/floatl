@@ -1,4 +1,4 @@
-import { addClass, removeClass, addEventListener } from "./utils";
+import { addClass, addEventListener, removeClass } from "../src/utils";
 
 describe("Utils", () => {
   let fixture;

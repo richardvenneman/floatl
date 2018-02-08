@@ -1,4 +1,4 @@
-import { addClass } from "./utils";
+import { addClass, removeClass } from "./utils";
 
 describe("Utils", () => {
   let fixture;
@@ -29,6 +29,18 @@ describe("Utils", () => {
       addClass(element, "test");
 
       expect(element.className).toEqual("one test");
+    });
+  });
+
+  describe("removeClass", () => {
+    it("removes a className from a DOM element", () => {
+      addClass(fixture, "test");
+
+      expect(fixture.className).toEqual("test");
+
+      removeClass(fixture, "test");
+
+      expect(fixture.className).toEqual("");
     });
   });
 });

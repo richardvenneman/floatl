@@ -5,7 +5,7 @@
 A pragmatic implementation of the [Float Label Pattern](http://mds.is/float-label-pattern/).
 
 [![NPM](https://img.shields.io/npm/v/floatl.svg)](https://www.npmjs.com/package/floatl)
-[![Build Status](https://semaphoreci.com/api/v1/richardvenneman/floatl/branches/typescript/badge.svg)](https://semaphoreci.com/richardvenneman/floatl)[![bitHound Overall
+[![Build Status](https://semaphoreci.com/api/v1/richardvenneman/floatl/branches/typescript/badge.svg)](https://semaphoreci.com/richardvenneman/floatl)
 
 ![Floatl](https://i.imgur.com/fjDfAcE.gif)
 
@@ -32,7 +32,7 @@ npm i floatl
 
 ### Using the global Floatl (classic browser environment)
 
-If you're not using a module bundler, you can download and include the globally built [built/floatl.umd.js](https://github.com/richardvenneman/floatl/tree/master/built) in your app.
+If you're not using a module bundler, you can download the globally built UMD version from the [GitHub releases page](https://github.com/richardvenneman/floatl/releases) and include it in your app.
 This adds Floatl to the global namespace.
 
 ## Usage

@@ -1,9 +1,14 @@
 {
   "compilerOptions": {
+    "rootDir": "./src",
     "outDir": "./built",
-    "target": "es5"
+    "target": "es5",
+    "sourceMap": true
   },
   "include": [
     "./src/**/*"
+  ],
+  "exclude": [
+    "**/*.spec.ts"
   ]
 }

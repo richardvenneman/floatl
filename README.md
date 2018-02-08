@@ -1,5 +1,3 @@
-@@ -1,194 +0,0 @@
-
 # Floatl
 
 A pragmatic implementation of the [Float Label Pattern](http://mds.is/float-label-pattern/).

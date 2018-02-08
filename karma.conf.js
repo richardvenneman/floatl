@@ -16,7 +16,9 @@ module.exports = function(config) {
     browsers: ["ChromeHeadless"],
 
     coverageReporter: {
-      type: "lcov"
+      type: "lcov",
+      subdir: ".",
+      file: "lcov.info"
     }
   });
 };

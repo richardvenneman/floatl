@@ -6,6 +6,8 @@ A pragmatic implementation of the [Float Label Pattern](http://mds.is/float-labe
 
 [![NPM](https://img.shields.io/npm/v/floatl.svg)](https://www.npmjs.com/package/floatl)
 [![Build Status](https://semaphoreci.com/api/v1/richardvenneman/floatl/branches/typescript/badge.svg)](https://semaphoreci.com/richardvenneman/floatl)
+[![Maintainability](https://api.codeclimate.com/v1/badges/c68d489f62e4a80f0ae2/maintainability)](https://codeclimate.com/github/richardvenneman/floatl/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/c68d489f62e4a80f0ae2/test_coverage)](https://codeclimate.com/github/richardvenneman/floatl/test_coverage)
 
 ![Floatl](https://i.imgur.com/fjDfAcE.gif)
 

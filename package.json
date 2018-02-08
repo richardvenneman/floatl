@@ -33,9 +33,11 @@
     "karma-cli": "^1.0.1",
     "karma-jasmine": "^1.1.1",
     "karma-typescript": "^3.0.12",
+    "prettier": "1.10.2",
     "puppeteer": "^1.0.0",
     "rollup": "^0.55.0",
     "rollup-plugin-typescript": "^0.8",
+    "tslint-config-prettier": "^1.7.0",
     "typescript": "^2.7.1"
   }
 }

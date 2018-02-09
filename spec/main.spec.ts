@@ -1,4 +1,5 @@
 import { Floatl } from "../src/main";
+import { trigger } from "./specHelpers";
 
 describe("Floatl", () => {
   let fixture;
@@ -70,17 +71,17 @@ describe("Floatl", () => {
     it(`adds ${Floatl.FOCUSED_CLASS} class on focus`, () => {
       expect(element.classList.contains(Floatl.FOCUSED_CLASS)).toBeFalsy();
 
-      input.focus();
+      trigger(input, "focus");
 
       expect(element.classList.contains(Floatl.FOCUSED_CLASS)).toBeTruthy();
     });
 
     it(`removes ${Floatl.FOCUSED_CLASS} class on blur`, () => {
-      input.focus();
+      trigger(input, "focus");
 
       expect(element.classList.contains(Floatl.FOCUSED_CLASS)).toBeTruthy();
 
-      input.blur();
+      trigger(input, "blur");
 
       expect(element.classList.contains(Floatl.FOCUSED_CLASS)).toBeFalsy();
     });
@@ -99,18 +100,17 @@ describe("Floatl", () => {
     it(`adds ${Floatl.ACTIVE_CLASS} class when entering characters`, () => {
       expect(element.classList.contains(Floatl.ACTIVE_CLASS)).toBeFalsy();
 
-      input.focus();
       input.value = "test";
-      input.blur();
+      trigger(input, "keyup");
 
       expect(element.classList.contains(Floatl.ACTIVE_CLASS)).toBeTruthy();
     });
 
     it(`removes ${Floatl.ACTIVE_CLASS} removing all characters`, () => {
       input.value = "test";
-      input.blur();
+      trigger(input, "keyup");
       input.value = "";
-      input.blur();
+      trigger(input, "keyup");
 
       expect(element.classList.contains(Floatl.ACTIVE_CLASS)).toBeFalsy();
     });

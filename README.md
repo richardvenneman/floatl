@@ -17,13 +17,15 @@ Online example: https://richardvenneman.github.io/floatl/example
 
 🏝 Maintainable, no dependencies
 
-⚡️ Small, < 1Kb gzipped
+⚡️ Small in size, < 1Kb gzipped
 
 <details>
- <summary>🤣 Supports virtually all browsers*</summary>
- [![Sauce Test Status](https://saucelabs.com/browser-matrix/richardvenneman.svg)](https://saucelabs.com/u/richardvenneman)
+ <summary>🤣 Legacy browser support*</summary>
+ <a href="https://saucelabs.com/u/richardvenneman">
+  <img src="https://saucelabs.com/browser-matrix/richardvenneman.svg" alt="Sauce Test Status"/>
+ </a> 
  
- _* unfortunately, couldn't get IE8, IE9 to work on SauceLabs 😰_
+ _* Should work in IE8 & IE9 as well, but I couldn't get them to run on SauceLabs_ 😰
 </details>
 
 ## Installation

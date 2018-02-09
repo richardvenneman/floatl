@@ -84,6 +84,8 @@ const sauceLabsLaunchers = {
 
 module.exports = function(config) {
   config.set({
+    concurrency: 5,
+
     frameworks: ["jasmine", "karma-typescript"],
 
     files: ["src/**/*.ts", "spec/**/*.ts"],

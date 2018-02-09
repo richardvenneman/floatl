@@ -84,6 +84,8 @@ const sauceLabsLaunchers = {
 
 module.exports = function(config) {
   config.set({
+    logLevel: sauceLabs ? config.LOG_DEBUG : config.LOG_INFO,
+
     concurrency: 5,
 
     frameworks: ["jasmine", "karma-typescript"],

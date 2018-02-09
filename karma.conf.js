@@ -95,6 +95,11 @@ module.exports = function(config) {
       type: "lcov",
       subdir: ".",
       file: "lcov.info"
+    },
+
+    sauceLabs: {
+      build: process.env.SEMAPHORE_BUILD_NUMBER,
+      testName: "Karma tests"
     }
   });
 };

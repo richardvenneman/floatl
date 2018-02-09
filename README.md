@@ -13,9 +13,18 @@ Online example: https://richardvenneman.github.io/floatl/example
 
 ## Features
 
-* Browser support all the way down to IE8
-* Supports textfields and textareas
-* No dependencies (< 2KB minified)
+🤙 Supports textfields and textareas
+
+🏝 Maintainable, no dependencies
+
+⚡️ Small, < 1Kb gzipped
+
+<details>
+ <summary>🤣 Supports virtually all browsers*</summary>
+ [![Sauce Test Status](https://saucelabs.com/browser-matrix/richardvenneman.svg)](https://saucelabs.com/u/richardvenneman)
+ 
+ _* unfortunately, couldn't get IE8, IE9 to work on SauceLabs 😰_
+</details>
 
 ## Installation
 

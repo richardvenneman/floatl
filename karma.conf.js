@@ -44,18 +44,6 @@ const sauceLabsLaunchers = {
     version: "10.0",
     platform: "Windows 7"
   },
-  sl_ie_9: {
-    base: "SauceLabs",
-    browserName: "internet explorer",
-    version: "9.0",
-    platform: "Windows 7"
-  },
-  sl_ie_8: {
-    base: "SauceLabs",
-    browserName: "internet explorer",
-    version: "8.0",
-    platform: "Windows 7"
-  },
   sl_ios_safari_9: {
     base: "SauceLabs",
     browserName: "iphone",
@@ -84,8 +72,6 @@ const sauceLabsLaunchers = {
 
 module.exports = function(config) {
   config.set({
-    logLevel: sauceLabs ? config.LOG_DEBUG : config.LOG_INFO,
-
     concurrency: 5,
 
     frameworks: ["jasmine", "karma-typescript"],
@@ -109,10 +95,6 @@ module.exports = function(config) {
       type: "lcov",
       subdir: ".",
       file: "lcov.info"
-    },
-
-    sauceLabs: {
-      recordScreenshots: true
     }
   });
 };

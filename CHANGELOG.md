@@ -12,6 +12,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 * Drop Bower support
 * Drop support for passing in jQuery elements
 * Drop included styling
+* Properly setup CodeClimate
+* Add SauceLabs
 
 ## [1.0.5] - 2017-02-27
 

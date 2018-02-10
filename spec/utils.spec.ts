@@ -3,85 +3,85 @@ import {
   addEventListener,
   removeClass,
   removeEventListener
-} from "../src/utils";
+} from "../src/utils"
 
 describe("Utils", () => {
-  let fixture;
+  let fixture
 
   beforeEach(() => {
-    document.body.insertAdjacentHTML("afterbegin", `<div id="fixture"></div>`);
-    fixture = document.getElementById("fixture");
-  });
+    document.body.insertAdjacentHTML("afterbegin", `<div id="fixture"></div>`)
+    fixture = document.getElementById("fixture")
+  })
 
   afterEach(() => {
-    document.body.removeChild(fixture);
-  });
+    document.body.removeChild(fixture)
+  })
 
   describe("addClass", () => {
     it("adds a className to a DOM element", () => {
-      addClass(fixture, "test");
+      addClass(fixture, "test")
 
-      expect(fixture.className).toEqual("test");
-    });
+      expect(fixture.className).toEqual("test")
+    })
 
     it("adds a className to a DOM element with existing classes", () => {
       fixture.insertAdjacentHTML(
         "afterbegin",
         `<div id="element" class="one"></div>`
-      );
-      const element = document.getElementById("element");
+      )
+      const element = document.getElementById("element")
 
-      addClass(element, "test");
+      addClass(element, "test")
 
-      expect(element.className).toEqual("one test");
-    });
-  });
+      expect(element.className).toEqual("one test")
+    })
+  })
 
   describe("removeClass", () => {
     it("removes a className from a DOM element", () => {
-      addClass(fixture, "test");
+      addClass(fixture, "test")
 
-      expect(fixture.className).toEqual("test");
+      expect(fixture.className).toEqual("test")
 
-      removeClass(fixture, "test");
+      removeClass(fixture, "test")
 
-      expect(fixture.className).toEqual("");
-    });
-  });
+      expect(fixture.className).toEqual("")
+    })
+  })
 
   describe("addEventListener", () => {
     it("executes callback on attached DOM events", () => {
-      const event = document.createEvent("HTMLEvents");
-      event.initEvent("click", true, true);
+      const event = document.createEvent("HTMLEvents")
+      event.initEvent("click", true, true)
 
       const callback = () => {
-        fixture.innerHTML = "callback changed value";
-      };
+        fixture.innerHTML = "callback changed value"
+      }
 
-      addEventListener(fixture, "click", callback);
-      fixture.dispatchEvent(event);
+      addEventListener(fixture, "click", callback)
+      fixture.dispatchEvent(event)
 
-      expect(fixture.innerHTML).toEqual("callback changed value");
-    });
-  });
+      expect(fixture.innerHTML).toEqual("callback changed value")
+    })
+  })
 
   describe("removeEventListener", () => {
     it("works", () => {
-      const cb = () => (fixture.innerHTML = "test");
-      const event = document.createEvent("HTMLEvents");
-      event.initEvent("click", true, true);
+      const cb = () => (fixture.innerHTML = "test")
+      const event = document.createEvent("HTMLEvents")
+      event.initEvent("click", true, true)
 
-      addEventListener(fixture, "click", cb);
-      fixture.dispatchEvent(event);
+      addEventListener(fixture, "click", cb)
+      fixture.dispatchEvent(event)
 
-      expect(fixture.innerHTML).toEqual("test");
+      expect(fixture.innerHTML).toEqual("test")
 
-      fixture.innerHTML = "";
+      fixture.innerHTML = ""
 
-      removeEventListener(fixture, "click", cb);
-      fixture.dispatchEvent(event);
+      removeEventListener(fixture, "click", cb)
+      fixture.dispatchEvent(event)
 
-      expect(fixture.innerHTML).toEqual("");
-    });
-  });
-});
+      expect(fixture.innerHTML).toEqual("")
+    })
+  })
+})

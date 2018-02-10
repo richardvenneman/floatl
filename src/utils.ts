@@ -2,7 +2,7 @@ export function addClass(element: Element, className: string) {
   if (element.classList) {
     element.classList.add(className);
   } else {
-    element.className += ` %{className}`;
+    element.className += ` ${className}`;
   }
 }
 
@@ -22,7 +22,7 @@ export function addEventListener(element: Element, event: string, cb: any) {
   if (element.addEventListener) {
     element.addEventListener(event, cb);
   } else {
-    (element as any).attachEvent(`on%{event}`, () => {
+    (element as any).attachEvent(`on${event}`, () => {
       cb.call(element);
     });
   }

@@ -1,4 +1,9 @@
-import { addClass, addEventListener, removeClass } from "../src/utils";
+import {
+  addClass,
+  addEventListener,
+  removeClass,
+  removeEventListener
+} from "../src/utils";
 
 describe("Utils", () => {
   let fixture;
@@ -57,6 +62,26 @@ describe("Utils", () => {
       fixture.dispatchEvent(event);
 
       expect(fixture.innerHTML).toEqual("callback changed value");
+    });
+  });
+
+  describe("removeEventListener", () => {
+    it("works", () => {
+      const cb = () => (fixture.innerHTML = "test");
+      const event = document.createEvent("HTMLEvents");
+      event.initEvent("click", true, true);
+
+      addEventListener(fixture, "click", cb);
+      fixture.dispatchEvent(event);
+
+      expect(fixture.innerHTML).toEqual("test");
+
+      fixture.innerHTML = "";
+
+      removeEventListener(fixture, "click", cb);
+      fixture.dispatchEvent(event);
+
+      expect(fixture.innerHTML).toEqual("");
     });
   });
 });

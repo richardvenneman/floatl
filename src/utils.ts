@@ -27,3 +27,11 @@ export function addEventListener(element: Element, event: string, cb: any) {
     });
   }
 }
+
+export function removeEventListener(element: Element, event: string, cb: any) {
+  if (element.removeEventListener) {
+    element.removeEventListener(event, cb);
+  } else {
+    (element as any).detachEvent(`on${event}`, cb);
+  }
+}

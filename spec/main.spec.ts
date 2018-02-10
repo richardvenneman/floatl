@@ -115,4 +115,25 @@ describe("Floatl", () => {
       expect(element.classList.contains(Floatl.ACTIVE_CLASS)).toBeFalsy();
     });
   });
+
+  describe("Destroy", () => {
+    it("removes event listeners when destroying", () => {
+      const element = document.getElementById("floatlOne");
+      const input = document.getElementById(
+        "floatlOneInput"
+      ) as HTMLInputElement;
+      const floatl = new Floatl(element);
+
+      floatl.destroy();
+
+      trigger(input, "focus");
+
+      expect(element.classList.contains(Floatl.FOCUSED_CLASS)).toBeFalsy();
+
+      input.value = "test";
+      trigger(input, "keyup");
+
+      expect(element.classList.contains(Floatl.ACTIVE_CLASS)).toBeFalsy();
+    });
+  });
 });

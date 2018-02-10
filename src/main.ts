@@ -1,4 +1,9 @@
-import { addClass, addEventListener, removeClass } from "./utils";
+import {
+  addClass,
+  addEventListener,
+  removeClass,
+  removeEventListener
+} from "./utils";
 
 export class Floatl {
   public static readonly FOCUSED_CLASS = "floatl--focused";
@@ -23,29 +28,40 @@ export class Floatl {
       addClass(this.element, Floatl.MULTILINE_CLASS);
     }
 
+    // Handle initial value
     this.handleChange();
-    this.bindListeners();
+
+    // Bind event listeners
+    addEventListener(this.input, "focus", this.addFocusedClass);
+    addEventListener(this.input, "blur", this.removeFocusedClass);
+
+    for (const event of ["keyup", "blur", "change", "input"]) {
+      addEventListener(this.input, event, this.handleChange);
+    }
   }
 
-  private handleChange() {
+  public destroy() {
+    removeEventListener(this.input, "focus", this.addFocusedClass);
+    removeEventListener(this.input, "blur", this.removeFocusedClass);
+
+    for (const event of ["keyup", "blur", "change", "input"]) {
+      removeEventListener(this.input, event, this.handleChange);
+    }
+  }
+
+  private handleChange = () => {
     if ((this.input as HTMLInputElement | HTMLTextAreaElement).value === "") {
       removeClass(this.element, Floatl.ACTIVE_CLASS);
     } else {
       addClass(this.element, Floatl.ACTIVE_CLASS);
     }
-  }
+  };
 
-  private bindListeners() {
-    addEventListener(this.input, "focus", () => {
-      addClass(this.element, Floatl.FOCUSED_CLASS);
-    });
+  private addFocusedClass = () => {
+    addClass(this.element, Floatl.FOCUSED_CLASS);
+  };
 
-    addEventListener(this.input, "blur", () => {
-      removeClass(this.element, Floatl.FOCUSED_CLASS);
-    });
-
-    for (const event of ["keyup", "blur", "change", "input"]) {
-      addEventListener(this.input, event, () => this.handleChange());
-    }
-  }
+  private removeFocusedClass = () => {
+    removeClass(this.element, Floatl.FOCUSED_CLASS);
+  };
 }

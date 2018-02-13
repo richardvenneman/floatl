@@ -41,6 +41,10 @@ yarn add floatl
 npm i -S floatl
 ```
 
+### Styling
+
+Add the required styling to your app. Please refer to the [GitHub wiki page](https://github.com/richardvenneman/floatl/wiki/Styling) on styling for more information.
+
 ## Using the global Floatl (classic browser environment)
 
 If you're not using a module bundler, you can download the globally built UMD version from the [GitHub releases page](https://github.com/richardvenneman/floatl/releases) and include it in your app.
@@ -48,7 +52,7 @@ This adds `Floatl` to the global namespace.
 
 ## Usage
 
-NOTE: Check the [GitHub wiki page](https://github.com/richardvenneman/floatl/wiki) for instructions on how to use with React & Angular.
+**NOTE: Check the [GitHub wiki page](https://github.com/richardvenneman/floatl/wiki) for instructions on how to use with React & Angular.**
 
 Markup your `label` and `input` (or `textarea`) with the floatl classes and wrap them in an element with the `floatl` class:
 
@@ -79,22 +83,26 @@ Initializing all of the Floatl inputs on your page can be easily done like this:
 ```javascript
 var elements = document.getElementsByClassName("floatl");
 
+// In modern browsers
 for (var element of elements) {
   new Floatl(element);
 }
+
+// In old browsers
+Array.from(document.getElementsByClassName("floatl")).forEach(function(
+  element
+) {
+  new floatl.Floatl(element);
+});
 ```
 
-### CSS styling
-
-All functionality and styling is basically achieved by toggling CSS classes. Because of this it is easy to apply your own styling. Check out this [Gist with example styling](https://gist.github.com/richardvenneman/cf64188aa645208c65c8) to get an idea.
-
-## Browser support
+## Placeholder polyfilling
 
 While the JavaScript supports IE8+, Floatl aims to be good at Floating Labels and only that. The Floating Labels Pattern works best with placeholders and it is therefor recommended to install legacy browser placeholder support should you need it, for example [Placekeeper](https://github.com/kristerkari/placekeeper) or [Placeholders.js](https://github.com/jamesallardice/Placeholders.js).
 
 ## Motivations
 
-There are several libraries available that implement the Float Label Pattern, most notably [floatlabels.js](https://github.com/clubdesign/floatlabels.js) and [FloatLabel.js](https://github.com/m10l/FloatLabel.js). However, these libraries did not quite fulfill the requisites I had in mind (see features above) and I did not find any Bower compatible libraries when I started this project. Furthermore I like to use a well-maintained library. Since we're using this library in production at [Cityspotters](https://www.cityspotters.com) I'm keeping this library up to date.
+There are several libraries available that implement the Float Label Pattern, most notably [floatlabels.js](https://github.com/clubdesign/floatlabels.js) and [FloatLabel.js](https://github.com/m10l/FloatLabel.js). However, these libraries did not quite fulfill the requisites I had in mind (see features above) and I did not find any Bower compatible libraries when I started this project. Furthermore I like to use a well-maintained library. Since we're using this library in production at [CitySpotters](https://www.cityspotters.com) I'm keeping this library up to date.
 
 ## Contributing
 

@@ -7,6 +7,9 @@ end
 
 activate :livereload
 
+activate :relative_assets
+set :relative_links, true
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 

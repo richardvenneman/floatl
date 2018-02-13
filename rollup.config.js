@@ -1,11 +1,11 @@
-import typescript from "rollup-plugin-typescript";
+import typescript from "rollup-plugin-typescript2";
 import pkg from "./package.json";
 
 export default [
   {
     input: "src/main.ts",
     output: { file: pkg.browser, name: pkg.name, format: "umd" },
-    plugins: [typescript({ typescript: require("typescript") })]
+    plugins: [typescript()]
   },
   {
     input: "src/main.ts",
@@ -13,6 +13,6 @@ export default [
       { file: pkg.main, format: "cjs" },
       { file: pkg.module, format: "es" }
     ],
-    plugins: [typescript({ typescript: require("typescript") })]
+    plugins: [typescript()]
   }
 ];

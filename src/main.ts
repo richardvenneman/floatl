@@ -5,7 +5,7 @@ import {
   removeEventListener
 } from "./utils"
 
-export default class Floatl {
+export class Floatl {
   public static readonly FOCUSED_CLASS = "floatl--focused"
   public static readonly ACTIVE_CLASS = "floatl--active"
   public static readonly MULTILINE_CLASS = "floatl--multiline"

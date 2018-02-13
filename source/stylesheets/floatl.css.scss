@@ -1,3 +1,9 @@
+$font-size: 16px;
+$vpadding: 13px;
+$hpadding: 8px;
+
+$label-font-size: 11px;
+
 $duration: 200ms;
 $border-color: hsl(0, 0%, 90%);
 $text-color: hsl(0, 0%, 40%);
@@ -17,14 +23,17 @@ $active-color: hsl(209, 82%, 54%);
     opacity: 1;
     visibility: visible;
     top: 1px;
+  }
+
+  .floatl__input {
+    padding: ($vpadding + $hpadding) $hpadding ($vpadding - $hpadding) $hpadding;
+  }
+
+  &.floatl--multiline .floatl__label {
     background-color: $background-color;
     background: linear-gradient(to bottom, rgba(white, .95) 0%,
                                            rgba(white, .95) 80%,
                                            rgba(white, 0) 100%);
-  }
-
-  .floatl__input {
-    padding: 17px 8px 5px 8px;
   }
 }
 
@@ -34,10 +43,10 @@ $active-color: hsl(209, 82%, 54%);
   opacity: 0;
   position: absolute;
   display: inline-block;
-  top: 9px;
-  left: 6px;
-  padding: 5px 3px 3px 3px;
-  font-size: 10px;
+  top: $vpadding;
+  left: $hpadding - 3px + 1px;
+  padding: 6px 3px 3px 3px;
+  font-size: $label-font-size;
   line-height: 1em;
   font-weight: bold;
   color: $text-color;
@@ -47,12 +56,10 @@ $active-color: hsl(209, 82%, 54%);
   transition: all $duration ease-in-out;
   appearance: none;
   outline: none;
-  margin-top: 0;
-  margin-left: 0;
-  padding: 11px 8px;
-  font-size: 15px;
+  padding: $vpadding $hpadding;
+  font-size: $font-size;
   border: 1px solid $border-color;
-  border-radius: 3px;
+  border-radius: 5px;
 
   &::selection {
     color: white;
@@ -62,8 +69,4 @@ $active-color: hsl(209, 82%, 54%);
   &:focus {
     border-color: $active-color;
   }
-}
-
-input.floatl__input {
-  height: 42px;
 }

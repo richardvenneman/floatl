@@ -1,17 +1,20 @@
 import typescript from "rollup-plugin-typescript2";
 import pkg from "./package.json";
 
+const banner = `/* ${pkg.name} version ${pkg.version} */`
+const exports = "default"
+
 export default [
   {
     input: "src/main.ts",
-    output: { file: pkg.browser, name: pkg.name, format: "umd" },
+    output: { banner, exports, file: pkg.browser, format: "umd", name: "Floatl" },
     plugins: [typescript()]
   },
   {
     input: "src/main.ts",
     output: [
-      { file: pkg.main, format: "cjs" },
-      { file: pkg.module, format: "es" }
+      { banner, exports, file: pkg.main, format: "cjs" },
+      { banner, exports, file: pkg.module, format: "es" }
     ],
     plugins: [typescript()]
   }

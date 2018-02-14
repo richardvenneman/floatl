@@ -23,8 +23,8 @@ Online example: https://richardvenneman.github.io/floatl/example
  <summary>🤣 Oldie browser support</summary>
  <a href="https://saucelabs.com/u/richardvenneman">
   <img src="https://saucelabs.com/browser-matrix/richardvenneman.svg" alt="Sauce Test Status"/>
- </a> 
- 
+ </a>
+
  _* Supports IE8 & IE9 as well, but I couldn't get them to run on SauceLabs_ 😰
 </details>
 
@@ -52,7 +52,7 @@ This adds `Floatl` to the global namespace.
 
 ## Usage
 
-**NOTE: Check the [GitHub wiki page](https://github.com/richardvenneman/floatl/wiki) for instructions on how to use with React & Angular.**
+*NOTE: Check the [GitHub wiki page](https://github.com/richardvenneman/floatl/wiki) for instructions on how to use with React & Angular.*
 
 Markup your `label` and `input` (or `textarea`) with the floatl classes and wrap them in an element with the `floatl` class:
 
@@ -66,13 +66,9 @@ Markup your `label` and `input` (or `textarea`) with the floatl classes and wrap
 Instantiate Floatl by passing in the wrapping DOM element:
 
 ```javascript
+import Floatl from "floatl";
+
 var element = document.getElementById("my-floatl-element");
-
-// Module approach
-import { Floatl } from "floatl";
-const floatl = new Floatl(element);
-
-// When using the global Floatl
 new Floatl(element);
 ```
 

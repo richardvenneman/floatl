@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 * Drop included styling
 * Properly setup CodeClimate
 * Add SauceLabs
+* Change CI to Semaphore
+* Add example site
 
 ## [1.0.5] - 2017-02-27
 

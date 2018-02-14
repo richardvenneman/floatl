@@ -1,4 +1,4 @@
-import { Floatl } from "../src/main"
+import Floatl from "../src/main"
 import { trigger } from "./specHelpers"
 
 describe("Floatl", () => {

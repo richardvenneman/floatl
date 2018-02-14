@@ -9,7 +9,7 @@ A pragmatic implementation of the [Float Label Pattern](http://mds.is/float-labe
 
 ![Floatl](https://i.imgur.com/fjDfAcE.gif)
 
-Online example: https://richardvenneman.github.io/floatl/example
+Try it for yourself: https://richardvenneman.github.io/floatl/
 
 ## Features
 
@@ -34,21 +34,14 @@ Floatl is built primarily for module bundlers such as [Browserify](http://browse
 As such it is distributed via [NPM](https://www.npmjs.com/package/floatl).
 
 ```bash
-yarn add floatl
-
-# or
-
-npm i -S floatl
+yarn add floatl # or npm i -S floatl
 ```
+
+_An UMD build is available from the [GitHub releases page](https://github.com/richardvenneman/floatl/releases) if you're not using a module bundler. This version adds `Floatl` to the global namespace._
 
 ### Styling
 
-Add the required styling to your app. Please refer to the [GitHub wiki page](https://github.com/richardvenneman/floatl/wiki/Styling) on styling for more information.
-
-## Using the global Floatl (classic browser environment)
-
-If you're not using a module bundler, you can download the globally built UMD version from the [GitHub releases page](https://github.com/richardvenneman/floatl/releases) and include it in your app.
-This adds `Floatl` to the global namespace.
+Add the required styling to your app. Please refer to the [GitHub wiki page on styling](https://github.com/richardvenneman/floatl/wiki/Styling) for more information.
 
 ## Usage
 
@@ -72,24 +65,13 @@ var element = document.getElementById("my-floatl-element");
 new Floatl(element);
 ```
 
-### Initializing multiple Floatls
+### Destroying instances
 
-Initializing all of the Floatl inputs on your page can be easily done like this:
+If you keep a reference to your Floatl instance, it's easy to remove all of the event handlers by calling the `destroy` instance method:
 
 ```javascript
-var elements = document.getElementsByClassName("floatl");
-
-// In modern browsers
-for (var element of elements) {
-  new Floatl(element);
-}
-
-// In old browsers
-Array.from(document.getElementsByClassName("floatl")).forEach(function(
-  element
-) {
-  new floatl.Floatl(element);
-});
+var myFloatl = new Floatl(element);
+myFloatl.destroy()
 ```
 
 ## Placeholder polyfilling
@@ -121,3 +103,6 @@ This project uses [Jasmine](http://jasmine.github.io) with the [Karma Test Runne
 ## License
 
 This library is released under the [MIT License](http://www.opensource.org/licenses/MIT).
+
+528 × 448
+264x224

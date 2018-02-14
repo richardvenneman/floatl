@@ -1,6 +1,6 @@
 {
   "name": "floatl",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "A pragmatic implementation of the Float Label Pattern",
   "homepage": "https://github.com/richardvenneman/floatl",
   "bugs": {

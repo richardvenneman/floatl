@@ -1,0 +1,78 @@
+html {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  animation: gradient 20s ease infinite;
+  color: #333;
+  background: linear-gradient(76deg, #2c3e50, #4ca1af);
+  background-size: 400% 400%;
+  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
+    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
+    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
+    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+  padding: 18vh 1rem;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+.header {
+  color: white;
+  text-align: center;
+  font-weight: 300;
+}
+
+.container {
+  will-change: transform;
+  margin: 0 auto;
+  padding: 3em;
+  background-color: white;
+  max-width: 360px;
+  border-radius: 5px;
+}
+
+input, textarea {
+  width: 100%;
+}
+
+.floatl + .floatl {
+  margin-top: 1em;
+}
+
+footer {
+  padding-top: 2em;
+  margin: 2em auto 0;
+  width: 128px;
+  text-align: center;
+  border-top: 1px dashed hsl(0, 0%, 90%);
+}
+
+.github-link {
+  transition: opacity 300ms ease;
+  opacity: 0.9;
+  display: inline-block;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}

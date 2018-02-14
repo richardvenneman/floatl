@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.1] - 2018-02-14
+### Fixed
+- Add `npm prepare` command to build the files
+
 ## [2.0.0] - 2018-02-14
 ### Added
 - `Floatl#destroy` to remove event listeners

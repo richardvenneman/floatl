@@ -1,4 +1,4 @@
-# Floatl
+# ☁️ Floatl
 
 A pragmatic implementation of the [Float Label Pattern](http://mds.is/float-label-pattern/).
 
@@ -45,7 +45,7 @@ Add the required styling to your app. Please refer to the [GitHub wiki page on s
 
 ## Usage
 
-*NOTE: Check the [GitHub wiki page](https://github.com/richardvenneman/floatl/wiki) for instructions on how to use with React & Angular.*
+*NOTE: Check the [GitHub wiki page](https://github.com/richardvenneman/floatl/wiki) for instructions on how to use with React, AngularJS and Stimulus.*
 
 Markup your `label` and `input` (or `textarea`) with the floatl classes and wrap them in an element with the `floatl` class:
 
@@ -103,6 +103,3 @@ This project uses [Jasmine](http://jasmine.github.io) with the [Karma Test Runne
 ## License
 
 This library is released under the [MIT License](http://www.opensource.org/licenses/MIT).
-
-528 × 448
-264x224

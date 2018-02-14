@@ -1,1 +1,7 @@
-node_modules
+.DS_Store
+.sass-cache
+.rpt2_cache
+
+/node_modules
+/built
+/coverage

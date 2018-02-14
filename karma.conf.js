@@ -1,43 +1,105 @@
-var webpackConfig = require('./webpack.config');
+process.env.CHROME_BIN = require("puppeteer").executablePath();
 
-webpackConfig.output = {
-  library: 'floatl',
-  libraryTarget: 'umd',
-  filename: 'lib/js/floatl.js'
+const sauceLabs = process.env.CI ? true : false;
+const sauceLabsLaunchers = {
+  sl_win_chrome: {
+    base: "SauceLabs",
+    browserName: "chrome",
+    platform: "Windows 10"
+  },
+  sl_mac_chrome: {
+    base: "SauceLabs",
+    browserName: "chrome",
+    platform: "macOS 10.12"
+  },
+  sl_firefox: {
+    base: "SauceLabs",
+    browserName: "firefox",
+    platform: "Windows 10"
+  },
+  sl_mac_firfox: {
+    base: "SauceLabs",
+    browserName: "firefox",
+    platform: "macOS 10.12"
+  },
+  sl_safari: {
+    base: "SauceLabs",
+    browserName: "safari",
+    platform: "macOS 10.12"
+  },
+  sl_edge: {
+    base: "SauceLabs",
+    browserName: "MicrosoftEdge",
+    platform: "Windows 10"
+  },
+  sl_ie_11: {
+    base: "SauceLabs",
+    browserName: "internet explorer",
+    version: "11.103",
+    platform: "Windows 10"
+  },
+  sl_ie_10: {
+    base: "SauceLabs",
+    browserName: "internet explorer",
+    version: "10.0",
+    platform: "Windows 7"
+  },
+  sl_ios_safari_9: {
+    base: "SauceLabs",
+    browserName: "iphone",
+    version: "10.3"
+  },
+  "SL_ANDROID4.4": {
+    base: "SauceLabs",
+    browserName: "android",
+    platform: "Linux",
+    version: "4.4"
+  },
+  SL_ANDROID5: {
+    base: "SauceLabs",
+    browserName: "android",
+    platform: "Linux",
+    version: "5.1"
+  },
+  SL_ANDROID6: {
+    base: "SauceLabs",
+    browserName: "Chrome",
+    platform: "Android",
+    version: "6.0",
+    device: "Android Emulator"
+  }
 };
 
-// NOTE: plugins configuration has been ommitted since Karma loads karma-*
-//  plugins by default
 module.exports = function(config) {
   config.set({
-    frameworks: ['jasmine'],
-    files: [
-      { pattern: 'node_modules/jquery/dist/jquery.js', watched: false },
-      { pattern: 'node_modules/jasmine-jquery/lib/jasmine-jquery.js', watched: false },
-      { pattern: 'node_modules/jasmine-fixture/app/js/emmet.js', watched: false },
-      { pattern: 'node_modules/jasmine-fixture/app/js/jasmine-fixture.coffee', watched: false },
-      'test/*Test.js'
-    ],
+    concurrency: 5,
+
+    frameworks: ["jasmine", "karma-typescript"],
+
+    files: ["src/**/*.ts", "spec/**/*.ts"],
+
     preprocessors: {
-      'test/*Test.js': ['webpack'],
-      '**/*.coffee': ['coffee']
+      "src/**/*.ts": ["karma-typescript", "coverage"],
+      "spec/**/*.ts": "karma-typescript"
     },
-    reporters: ['nyan', 'notify'],
-    port: 9876,
-    colors: true,
-    logLevel: config.LOG_WARN,
-    autoWatch: true,
-    browsers: [(process.env.TRAVIS_CI === 'true'? 'Firefox' : 'PhantomJS')],
-    singleRun: process.env.TRAVIS_CI === 'true',
 
-    // Webpack
-    webpack: webpackConfig,
+    reporters: ["progress", "coverage", "karma-typescript", "notify"].concat(
+      sauceLabs ? "saucelabs" : []
+    ),
 
-    // SCSS
-    scssPreprocessor: {
-      options: {
-        sourceMap: true
-      }
+    customLaunchers: sauceLabs ? sauceLabsLaunchers : {},
+
+    browsers: sauceLabs ? Object.keys(sauceLabsLaunchers) : ["ChromeHeadless"],
+
+    coverageReporter: {
+      type: "lcov",
+      subdir: ".",
+      file: "lcov.info"
+    },
+
+    sauceLabs: {
+      build: process.env.SEMAPHORE_BUILD_NUMBER,
+      testName: "Karma tests"
     }
   });
 };

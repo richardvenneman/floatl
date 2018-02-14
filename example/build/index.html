@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Floatl</title>
+    <link href="stylesheets/site.css" rel="stylesheet" />
+    <script src="javascripts/vendor/floatl.umd.js"></script>
+  </head>
+  <body>
+    <h1 class="header">Floatl</h1>
+
+<div class="container">
+  <div class="floatl js-floatl">
+    <label class="floatl__label">First name</label>
+    <input class="floatl__input" placeholder="First name" type="text">
+  </div>
+
+  <div class="floatl js-floatl">
+    <label class="floatl__label">Last name</label>
+    <input class="floatl__input" placeholder="Last name" type="text">
+  </div>
+
+  <div class="floatl js-floatl">
+    <label class="floatl__label">Your comment</label>
+    <textarea class="floatl__input" placeholder="Your comment" rows="4"></textarea>
+  </div>
+
+  <footer>
+    <a class="github-link" href="https://github.com/richardvenneman/floatl">
+      <img src="images/GitHub-Mark-64px.png" class="github-link__img" width="32" height="32" alt="Github mark 64px" />
+    </a>
+  </footer>
+</div>
+
+<script>
+  Array.from(document.getElementsByClassName('floatl')).forEach(
+    function(element) {
+      new Floatl(element);
+    }
+  );
+</script>
+
+  </body>
+</html>

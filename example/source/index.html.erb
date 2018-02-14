@@ -1,0 +1,36 @@
+---
+title: Floatl
+---
+
+<h1 class="header">Floatl</h1>
+
+<div class="container">
+  <div class="floatl js-floatl">
+    <label class="floatl__label">First name</label>
+    <input class="floatl__input" placeholder="First name" type="text">
+  </div>
+
+  <div class="floatl js-floatl">
+    <label class="floatl__label">Last name</label>
+    <input class="floatl__input" placeholder="Last name" type="text">
+  </div>
+
+  <div class="floatl js-floatl">
+    <label class="floatl__label">Your comment</label>
+    <textarea class="floatl__input" placeholder="Your comment" rows="4"></textarea>
+  </div>
+
+  <footer>
+    <a class="github-link" href="https://github.com/richardvenneman/floatl">
+      <%= image_tag('GitHub-Mark-64px.png', class: 'github-link__img', width: '32', height: '32') %>
+    </a>
+  </footer>
+</div>
+
+<script>
+  Array.from(document.getElementsByClassName('floatl')).forEach(
+    function(element) {
+      new Floatl(element);
+    }
+  );
+</script>

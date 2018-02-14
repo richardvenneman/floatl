@@ -1,0 +1,4 @@
+require 'middleman-gh-pages'
+
+ENV['PROJECT_ROOT'] = '/Users/richard/Projects/floatl/example'
+ENV['COMMIT_MESSAGE_SUFFIX'] = '[skip ci]'

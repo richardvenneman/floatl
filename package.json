@@ -21,7 +21,8 @@
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "test": "karma start --single-run",
-    "tdd": "karma start"
+    "tdd": "karma start",
+    "prepare": "npm run build"
   },
   "browser": "built/floatl.umd.js",
   "dependencies": {},

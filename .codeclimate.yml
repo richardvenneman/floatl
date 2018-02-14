@@ -1,6 +1,0 @@
-languages:
-  CoffeeScript: true
-  JavaScript: true
-exclude_paths:
-- "dist"
-- "node_modules"

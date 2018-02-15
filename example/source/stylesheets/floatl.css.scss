@@ -1,6 +1,6 @@
 $font-size: 16px;
-$vpadding: 13px;
-$hpadding: 8px;
+$vpadding: 7px;
+$hpadding: 11px;
 
 $label-font-size: 11px;
 
@@ -20,53 +20,61 @@ $active-color: hsl(209, 82%, 54%);
 
 .floatl--active {
   .floatl__label {
-    opacity: 1;
     visibility: visible;
+    opacity: 1;
     top: 1px;
   }
 
   .floatl__input {
-    padding: ($vpadding + $hpadding) $hpadding ($vpadding - $hpadding) $hpadding;
+    padding: ($vpadding * 3) $hpadding $vpadding;
   }
 
   &.floatl--multiline .floatl__label {
+    background: linear-gradient(
+      to bottom,
+      rgba(white, 0.95) 0%,
+      rgba(white, 0.95) 80%,
+      rgba(white, 0) 100%
+    );
     background-color: $background-color;
-    background: linear-gradient(to bottom, rgba(white, .95) 0%,
-                                           rgba(white, .95) 80%,
-                                           rgba(white, 0) 100%);
   }
 }
 
 .floatl__label {
-  transition: all $duration ease-in-out;
+  transition: all $duration ease;
+  position: absolute;
   visibility: hidden;
   opacity: 0;
-  position: absolute;
-  display: inline-block;
-  top: $vpadding;
+  top: 3px;
   left: $hpadding - 3px + 1px;
-  padding: 6px 3px 3px 3px;
+  display: inline-block;
+  padding: 6px 3px 3px;
+  font-weight: bold;
   font-size: $label-font-size;
   line-height: 1em;
-  font-weight: bold;
   color: $text-color;
 }
 
 .floatl__input {
-  transition: all $duration ease-in-out;
-  appearance: none;
-  outline: none;
-  padding: $vpadding $hpadding;
+  transition: all $duration ease;
+  padding: ($vpadding * 2) $hpadding;
+  background-color: hsl(0, 0%, 98%);
   font-size: $font-size;
   border: 1px solid $border-color;
   border-radius: 5px;
+  appearance: none;
+  outline: none;
 
   &::selection {
-    color: white;
     background-color: $active-color;
+    color: white;
   }
 
   &:focus {
     border-color: $active-color;
   }
+}
+
+input.floatl__input {
+  height: 47px;
 }

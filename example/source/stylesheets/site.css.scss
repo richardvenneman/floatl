@@ -57,6 +57,10 @@ input, textarea {
   width: 100%;
 }
 
+textarea {
+  height: 100px;
+}
+
 .floatl + .floatl {
   margin-top: 1em;
 }

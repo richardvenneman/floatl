@@ -5,47 +5,51 @@
   color: #2a8dea; }
 
 .floatl--active .floatl__label {
-  opacity: 1;
   visibility: visible;
+  opacity: 1;
   top: 1px; }
 .floatl--active .floatl__input {
-  padding: 21px 8px 5px 8px; }
+  padding: 21px 11px 7px; }
 .floatl--active.floatl--multiline .floatl__label {
-  background-color: white;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.95)), color-stop(80%, rgba(255, 255, 255, 0.95)), to(rgba(255, 255, 255, 0)));
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 80%, rgba(255, 255, 255, 0) 100%); }
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 80%, rgba(255, 255, 255, 0) 100%);
+  background-color: white; }
 
 .floatl__label {
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  position: absolute;
   visibility: hidden;
   opacity: 0;
-  position: absolute;
+  top: 3px;
+  left: 9px;
   display: inline-block;
-  top: 13px;
-  left: 6px;
-  padding: 6px 3px 3px 3px;
+  padding: 6px 3px 3px;
+  font-weight: bold;
   font-size: 11px;
   line-height: 1em;
-  font-weight: bold;
   color: #666666; }
 
 .floatl__input {
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  padding: 14px 11px;
+  background-color: #fafafa;
+  font-size: 16px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  outline: none;
-  padding: 13px 8px;
-  font-size: 16px;
-  border: 1px solid #e6e6e6;
-  border-radius: 5px; }
+  outline: none; }
   .floatl__input::-moz-selection {
-    color: white;
-    background-color: #2a8dea; }
+    background-color: #2a8dea;
+    color: white; }
   .floatl__input::selection {
-    color: white;
-    background-color: #2a8dea; }
+    background-color: #2a8dea;
+    color: white; }
   .floatl__input:focus {
     border-color: #2a8dea; }
+
+input.floatl__input {
+  height: 47px; }

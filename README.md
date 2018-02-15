@@ -1,6 +1,6 @@
 # ☁️ Floatl
 
-A pragmatic implementation of the [Float Label Pattern](http://mds.is/float-label-pattern/).
+A pragmatic implementation of the [Float Label Pattern](https://dribbble.com/shots/1254439--GIF-Mobile-Form-Interaction) for the web.
 
 [![NPM](https://img.shields.io/npm/v/floatl.svg)](https://www.npmjs.com/package/floatl)
 [![Build Status](https://semaphoreci.com/api/v1/richardvenneman/floatl/branches/master/badge.svg)](https://semaphoreci.com/richardvenneman/floatl)

@@ -39,7 +39,7 @@
     "karma-typescript": "^3.0.12",
     "prettier": "1.13.4",
     "puppeteer": "^1.0.0",
-    "rollup": "^0.59.0",
+    "rollup": "^0.61.2",
     "rollup-plugin-typescript2": "^0.14.0",
     "tslint-config-prettier": "^1.8.0",
     "typescript": "^2.7.2"

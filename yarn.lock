@@ -2191,8 +2191,8 @@ karma-sauce-launcher@^1.2.0:
     wd "^1.4.0"
 
 karma-typescript@^3.0.12:
-  version "3.0.12"
-  resolved "https://registry.yarnpkg.com/karma-typescript/-/karma-typescript-3.0.12.tgz#aa2cbdd111442a09c6dbcbaaeaf48499654c6913"
+  version "3.0.13"
+  resolved "https://registry.yarnpkg.com/karma-typescript/-/karma-typescript-3.0.13.tgz#8948afbd103ac1987a5961a0f43a1ba2871067cd"
   dependencies:
     acorn "^4.0.4"
     assert "^1.4.1"

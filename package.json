@@ -33,7 +33,7 @@
     "karma": "^3.0.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-cli": "^1.0.1",
-    "karma-jasmine": "^1.1.1",
+    "karma-jasmine": "^2.0.1",
     "karma-notify-reporter": "^1.0.1",
     "karma-sauce-launcher": "^1.2.0",
     "karma-typescript": "^3.0.12",

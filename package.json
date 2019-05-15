@@ -35,7 +35,7 @@
     "karma-cli": "^1.0.1",
     "karma-jasmine": "^1.1.1",
     "karma-notify-reporter": "^1.0.1",
-    "karma-sauce-launcher": "^1.2.0",
+    "karma-sauce-launcher": "^2.0.2",
     "karma-typescript": "^3.0.12",
     "prettier": "1.17.1",
     "puppeteer": "^1.0.0",

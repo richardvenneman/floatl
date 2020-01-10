@@ -2324,6 +2324,10 @@ jasmine-core@^2.99.1:
   version "2.99.1"
   resolved "https://registry.yarnpkg.com/jasmine-core/-/jasmine-core-2.99.1.tgz#e6400df1e6b56e130b61c4bcd093daa7f6e8ca15"
 
+jasmine-core@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/jasmine-core/-/jasmine-core-3.5.0.tgz#132c23e645af96d85c8bca13c8758b18429fc1e4"
+
 jasmine-core@~3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/jasmine-core/-/jasmine-core-3.0.0.tgz#8cdb20cf336b1b86830edc58b1a8aac47455e94c"
@@ -2412,9 +2416,11 @@ karma-coverage@^1.1.1:
     minimatch "^3.0.0"
     source-map "^0.5.1"
 
-karma-jasmine@^1.1.1:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/karma-jasmine/-/karma-jasmine-1.1.2.tgz#394f2b25ffb4a644b9ada6f22d443e2fd08886c3"
+karma-jasmine@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/karma-jasmine/-/karma-jasmine-3.1.0.tgz#e234e2a50bcf4d040c79b8b1826465f783590245"
+  dependencies:
+    jasmine-core "^3.5.0"
 
 karma-notify-reporter@^1.0.1:
   version "1.1.0"
